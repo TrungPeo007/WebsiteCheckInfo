@@ -45,7 +45,7 @@ app.get("/hethongquanly", (req, res) => {
 });
 
 app.get("/chitietchamdiem", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "HTML/ChiTietChamDiem.html"));
+    res.sendFile(path.resolve(__dirname, "HTML/ChiTietChamDiem.html"));
 });
 
 /* API LOGIN */
@@ -55,13 +55,14 @@ app.post("/login", (req, res) => {
 
     /* ĐỌC FILE JSON */
 
+    const dataPath = path.join(
+        __dirname,
+        "data",
+        "data.json"
+    );
+
     const data = JSON.parse(
-
-        fs.readFileSync(
-            "./data/data.json",
-            "utf8"
-        )
-
+        fs.readFileSync(dataPath, "utf8")
     );
 
     /* TÌM TÀI KHOẢN */
@@ -79,7 +80,7 @@ app.post("/login", (req, res) => {
 
     /* NẾU ĐÚNG */
 
-    if(account){
+    if (account) {
 
         res.json({
 
@@ -92,7 +93,7 @@ app.post("/login", (req, res) => {
 
     /* NẾU SAI */
 
-    else{
+    else {
 
         res.json({
 
@@ -106,10 +107,8 @@ app.post("/login", (req, res) => {
 
 /* CHẠY SERVER */
 
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
 
-    console.log(
-        "Server running at http://localhost:3000"
-    );
-
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
