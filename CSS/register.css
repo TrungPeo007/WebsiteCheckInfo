@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e9e9e9;
+    overflow: hidden;
+}
+
+/* KHUNG CHÍNH - Tăng chiều cao lên 700px để chứa trọn vẹn toàn bộ form */
+.container {
+    width: 1000px;
+    height: 700px; 
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #b90000 45%, #b90000 45%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* BÊN TRÁI */
+.left {
+    width: 45%;
+    background: transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* ICON ĐẢNG */
+.logo {
+    width: 90px;
+    margin-bottom: 25px;
+    object-fit: contain;
+}
+
+/* CHỮ BÊN TRÁI */
+.left h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.left h1 {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.left p {
+    font-size: 17px;
+    color: #ffd54f;
+    font-weight: bold;
+}
+
+/* ICON BÚA LIỀM MỜ NỀN */
+.left::before {
+    content: "☭";
+    position: absolute;
+    bottom: -40px;
+    left: -10px;
+    font-size: 250px;
+    color: rgba(255, 255, 255, 0.08);
+    font-weight: bold;
+}
+
+/* BÊN PHẢI */
+.right {
+    width: 55%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+/* CARD REGISTER - KHÔNG CÒN THANH CUỘN */
+.register-box {
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    margin-left: 50px;
+    border-radius: 18px;
+    padding: 30px 35px;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    
+    /* Loại bỏ hoàn toàn các thuộc tính liên quan đến cuộn (overflow) */
+    overflow: visible; 
+}
+
+/* TITLE */
+.register-box h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 4px;
+    font-weight: 800;
+}
+
+.register-box .desc {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+/* LABEL - Thu nhỏ khoảng cách */
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    display: block;
+}
+
+/* INPUT - Tinh chỉnh khoảng cách margin gọn gàng hơn */
+.input-box {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 42px; /* Giảm nhẹ chiều cao từ 44px xuống 42px để form cực kỳ thanh thoát */
+    padding: 0 15px;
+    padding-right: 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+    background: #fafafa;
+}
+
+.input-box input:focus {
+    border: 1px solid #c00000;
+    background: white;
+    box-shadow: 0 0 8px rgba(192, 0, 0, 0.2);
+}
+
+/* ICON MẮT */
+.eye {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+    font-size: 16px;
+}
+
+/* BUTTON ĐĂNG KÝ */
+button {
+    width: 100%;
+    height: 44px;
+    background: #d60000;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+button:hover {
+    background: #b90000;
+}
+
+/* ĐIỀU HƯỚNG QUAY LẠI ĐĂNG NHẬP */
+.login-redirect {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 12px;
+    color: #444;
+}
+
+.login-redirect a {
+    color: #d60000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-redirect a:hover {
+    text-decoration: underline;
+}
+
+.line1 {
+    margin: 15px 0;
+    border: none;
+    height: 1px;
+    background: #ddd;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE (Dành cho thiết bị di động) */
+@media (max-width: 900px) {
+    body {
+        overflow-y: auto;
+    }
+    
+    .container {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        background: #b90000;
+        margin: 20px 0;
+    }
+
+    .left {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .right {
+        width: 100%;
+        padding: 20px;
+        background: #f3f3f3;
+    }
+
+    .register-box {
+        margin-left: 0;
+        padding: 30px 20px;
+    }
+
+    .left h1 {
+        font-size: 30px;
+    }
+
+    .left h2 {
+        font-size: 22px;
+    }
+
+    .register-box h2 {
+        font-size: 24px;
+    }
+}

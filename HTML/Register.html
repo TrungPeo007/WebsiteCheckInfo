@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/Images/co-dang-cong-san-viet-nam-vector-removebg-preview.png">
+    <title>Đăng ký hệ thống</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- BÊN TRÁI (Giữ nguyên giao diện thương hiệu từ image_ffeafd.png) -->
+        <div class="left">
+            <!-- ICON ĐẢNG -->
+            <img src="/Images/co-dang-cong-san-viet-nam-vector-removebg-preview.png" class="logo" alt="Logo Đảng">
+
+            <h2>ĐẢNG BỘ XÃ KIẾN THỤY</h2>
+
+            <h1>
+                HỆ THỐNG ĐIỀU HÀNH ĐẢNG BỘ
+            </h1>
+
+            <p>
+                Bảo mật - Chính xác - Kịp thời - Hiệu quả
+            </p>
+        </div>
+
+        <!-- BÊN PHẢI (Form Đăng ký được tối ưu đồng bộ) -->
+        <div class="right">
+
+            <div class="register-box">
+
+                <h2>ĐĂNG KÝ TÀI KHOẢN</h2>
+
+                <p class="desc">
+                    Tạo tài khoản hệ thống điều hành Đảng bộ
+                </p>
+
+                <!-- Họ và tên -->
+                <label class="label">Họ và tên</label>
+                <div class="input-box">
+                    <input type="text" id="fullname" placeholder="Nhập họ và tên">
+                </div>
+
+                <!-- Số điện thoại -->
+                <label class="label">Số điện thoại</label>
+                <div class="input-box">
+                    <input type="text" id="phone" placeholder="Nhập số điện thoại">
+                </div>
+
+                <!-- Tên đăng nhập -->
+                <label class="label">Tên đăng nhập</label>
+                <div class="input-box">
+                    <input type="text" id="user" placeholder="Nhập tên đăng nhập">
+                </div>
+
+                <!-- Mật khẩu -->
+                <label class="label">Mật khẩu</label>
+                <div class="input-box">
+                    <input type="password" id="pass" placeholder="Nhập mật khẩu">
+                    <span class="eye" onclick="togglePassword('pass', this)">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                </div>
+
+                <!-- Xác nhận mật khẩu -->
+                <label class="label">Xác nhận mật khẩu</label>
+                <div class="input-box">
+                    <input type="password" id="confirm-pass" placeholder="Nhập lại mật khẩu">
+                    <span class="eye" onclick="togglePassword('confirm-pass', this)">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                </div>
+
+                <button onclick="dangKy()">
+                    Đăng ký
+                </button>
+
+                <div class="login-redirect">
+                    Đã có tài khoản? <a href="/login.html">Đăng nhập ngay</a>
+                </div>
+
+                <hr class="line1">
+
+                <div class="footer">
+                    Hỗ trợ: Ngô Thị Thư - SDT: 0982596042
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Hàm ẩn/hiện mật khẩu tiện ích
+        function togglePassword(inputId, element) {
+            const input = document.getElementById(inputId);
+            const icon = element.querySelector('i');
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = "password";
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        function dangKy() {
+            // Logic xử lý đăng ký của bạn ở đây
+            alert('Chức năng đăng ký đang được xử lý!');
+        }
+    </script>
+</body>
+
+</html>
