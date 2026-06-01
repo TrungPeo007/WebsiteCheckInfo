@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chấm điểm Chi bộ</title>
+  <link rel="stylesheet" href="/CSS/chamdiem.css">
+</head>
+<body>
+  <h1>Phiếu chấm điểm Chi bộ</h1>
+
+  <form id="scoreForm">
+    <table>
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Tiêu chí</th>
+          <th>Điểm chuẩn</th>
+          <th>Điểm thành viên</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Thời lượng tham gia sinh hoạt</td>
+          <td>5</td>
+          <td><input type="number" min="0" max="5" name="c1"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Tỷ lệ tham dự</td>
+          <td>5</td>
+          <td><input type="number" min="0" max="5" name="c2"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Công tác chuẩn bị</td>
+          <td>10</td>
+          <td><input type="number" min="0" max="10" name="c3"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Tổ chức sinh hoạt</td>
+          <td>25</td>
+          <td><input type="number" min="0" max="25" name="c4"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button type="button" class="btn" onclick="calculateScore()">Đánh giá</button>
+  </form>
+
+  <div class="result" id="resultBox"></div>
+
+  <script>
+    function calculateScore(){
+      const form = document.forms['scoreForm'];
+      let total = 0;
+      for(let i=0;i<form.elements.length;i++){
+        if(form.elements[i].type==="number"){
+          total += Number(form.elements[i].value)||0;
+        }
+      }
+      let rank = "";
+      if(total >= 40) rank = "<span class='excellent'>Xuất sắc</span>";
+      else if(total >= 30) rank = "<span class='good'>Tốt</span>";
+      else if(total >= 20) rank = "<span class='average'>Trung bình</span>";
+      else rank = "<span class='poor'>Yếu</span>";
+
+      document.getElementById("resultBox").innerHTML =
+        "<h3>Kết quả</h3><p>Tổng điểm: <b>"+total+"</b></p><p>Xếp loại: "+rank+"</p>";
+    }
+  </script>
+</body>
+</html>

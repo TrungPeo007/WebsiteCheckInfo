@@ -1,0 +1,246 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Nunito",sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#e9e9e9;
+overflow:hidden;
+}
+
+/* KHUNG CHÍNH */
+
+.container{
+width:1000px;
+height:560px;
+display:flex;
+border-radius:20px;
+overflow:hidden;
+background:linear-gradient(90deg,#b90000 45%,#b90000 45%);
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* BÊN TRÁI */
+
+.left{
+width:45%;
+background:transparent;
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:40px;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+/* ICON ĐẢNG */
+
+.logo{
+width:90px;
+margin-bottom:25px;
+object-fit:contain;
+}
+
+/* CHỮ */
+
+.left h2{
+font-size:30px;
+font-weight:bold;
+margin-bottom:12px;
+line-height:1.4;
+}
+
+.left h1{
+font-size:42px;
+font-weight:900;
+line-height:1.4;
+margin-bottom:18px;
+}
+
+.left p{
+font-size:17px;
+color:#ffd54f;
+font-weight:bold;
+}
+
+/* ICON BÚA LIỀM MỜ */
+
+.left::before{
+content:"☭";
+position:absolute;
+bottom:-40px;
+left:-10px;
+font-size:250px;
+color:rgba(255,255,255,0.08);
+font-weight:bold;
+}
+
+/* BÊN PHẢI */
+
+.right{
+width:55%;
+background:transparent;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+}
+
+/* CARD LOGIN */
+
+.login-box{
+width:100%;
+max-width:430px;
+background:white;
+margin-left : 50px;
+border-radius:18px;
+padding:40px 35px;
+max-height: 500px;
+border:1px solid #eee;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+
+.login-box h2{
+text-align:center;
+font-size:25px;
+color:#222;
+margin-bottom:10px;
+font-weight:800;
+}
+
+.login-box .desc{
+text-align:center;
+font-size:12px;
+color:#666;
+margin-bottom:35px;
+line-height:1.6;
+}
+
+/* LABEL */
+
+.label{
+font-size:15px;
+font-weight:bold;
+margin-bottom:8px;
+color:#333;
+display:block;
+}
+
+/* INPUT */
+
+.input-box{
+position:relative;
+margin-bottom:22px;
+}
+
+.input-box input{
+width:100%;
+height:52px;
+padding:0 15px;
+padding-right:45px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:15px;
+outline:none;
+transition:0.3s;
+background:#fafafa;
+}
+
+.input-box input:focus{
+border:1px solid #c00000;
+background:white;
+box-shadow:0 0 8px rgba(192,0,0,0.2);
+}
+
+/* ICON MẮT */
+
+.eye{
+position:absolute;
+right:15px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+color:#777;
+font-size:18px;
+}
+
+/* BUTTON */
+
+button{
+width:100%;
+height:45px;
+background:#d60000;
+border:none;
+border-radius:8px;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+margin-top:5px;
+}
+
+/* FOOTER */
+
+.footer{
+margin-top:28px;
+text-align:center;
+font-size:14px;
+color:#666;
+line-height:1.7;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.container{
+width:95%;
+height:auto;
+flex-direction:column;
+background:#b90000;
+}
+
+.left{
+width:100%;
+padding:50px 20px;
+}
+
+.right{
+width:100%;
+padding:25px;
+background:#f3f3f3;
+}
+
+.left h1{
+font-size:30px;
+}
+
+.left h2{
+font-size:22px;
+}
+
+.login-box h2{
+font-size:28px;
+}
+.line1{
+margin:25px 0;
+border:none;
+height:1px;
+background:#ddd;
+}
+.eye{
+    cursor:pointer;
+}
+}

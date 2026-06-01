@@ -1,0 +1,255 @@
+{
+  "taikhoan": [
+    {
+      "user": "Vancao",
+      "pass": "123456",
+      "hoten": "Nguyễn Văn Tiến",
+      "chibo": "Bí thư CB Văn Cao",
+      "role": "bithu"
+    },
+    {
+      "user": "Vanhoa",
+      "pass": "123456",
+      "hoten": "Nguyễn Văn Thuệ",
+      "chibo": "Bí thư CB Văn Hóa",
+      "role": "bithu"
+    },
+    {
+      "user": "Kimdoi1",
+      "pass": "123456",
+      "hoten": "Nguyễn Văn Khiên",
+      "chibo": "Bí thư CB Kim Đới 1",
+      "role": "bithu"
+    },
+     {
+      "user": "Kimdoi2",
+      "pass": "123456",
+      "hoten": "Đặng Thị Xoa",
+      "chibo": "Bí thư CB Kim Đới 2",
+      "role": "bithu"
+    },
+    {
+      "user": "BXD",
+      "pass": "123456",
+      "hoten": "Ngô Thị Thư",
+      "chibo": "admin tổng hợp",
+      "role": "admin"
+    }
+  ],
+  "chamdiem": [
+    {
+      "id": "I",
+      "group": "Thời lượng sinh hoạt chi bộ",
+      "max_point": 5,
+      "options": [
+        {
+          "condition": "Chi bộ 3-5 đảng viên, 55-60 phút",
+          "point": 5
+        },
+        {
+          "condition": "Chi bộ 3-5 đảng viên, 45-54 phút",
+          "point": 4
+        },
+        {
+          "condition": "Chi bộ 3-5 đảng viên, dưới 45 phút",
+          "point": 3
+        },
+        {
+          "condition": "Chi bộ 6-9 đảng viên, 70-90 phút",
+          "point": 5
+        },
+        {
+          "condition": "Chi bộ 6-9 đảng viên, 60-69 phút",
+          "point": 4
+        },
+        {
+          "condition": "Chi bộ 6-9 đảng viên, dưới 60 phút",
+          "point": 3
+        },
+        {
+          "condition": "Chi bộ ≥10 đảng viên, 80-90 phút",
+          "point": 5
+        },
+        {
+          "condition": "Chi bộ ≥10 đảng viên, 70-79 phút",
+          "point": 4
+        },
+        {
+          "condition": "Chi bộ ≥10 đảng viên, dưới 70 phút",
+          "point": 3
+        },
+        {
+          "condition": "Chi bộ ≥30 đảng viên, ≥100 phút",
+          "point": 5
+        },
+        {
+          "condition": "Chi bộ ≥30 đảng viên, 90-99 phút",
+          "point": 3
+        },
+        {
+          "condition": "Chi bộ ≥30 đảng viên, dưới 90 phút",
+          "point": 1
+        }
+      ]
+    },
+    {
+      "id": "II",
+      "group": "Tỷ lệ đảng viên dự sinh hoạt",
+      "max_point": 5,
+      "options": [
+        {
+          "condition": "≥90% và không có vắng mặt không lý do",
+          "point": 5
+        },
+        {
+          "condition": "85%-89% và không có vắng mặt không lý do",
+          "point": 4
+        },
+        {
+          "condition": "≤85% hoặc có vắng mặt không lý do",
+          "point": 3
+        }
+      ]
+    },
+    {
+      "id": "III",
+      "group": "Công tác chuẩn bị sinh hoạt chi bộ",
+      "max_point": 10,
+      "details": [
+        {
+          "name": "Chuẩn bị nội dung sinh hoạt, dự thảo nghị quyết",
+          "point": 4
+        },
+        {
+          "name": "Hồ sơ đầy đủ (kế hoạch, dự thảo, biên bản, phiếu ý kiến, nghị quyết)",
+          "point": 3
+        },
+        {
+          "name": "Đăng tải tài liệu lên ứng dụng Sổ tay đảng viên trước ≥1 ngày",
+          "point": 2
+        }
+      ]
+    },
+    {
+      "id": "IV",
+      "group": "Tổ chức sinh hoạt chi bộ",
+      "max_point": 25,
+      "details": [
+        {
+          "name": "Thực hiện đầy đủ quy trình sinh hoạt chi bộ",
+          "point": 10,
+          "substeps": [
+            {
+              "name": "Mở đầu sinh hoạt",
+              "point": 2.5
+            },
+            {
+              "name": "Thảo luận, đánh giá nhiệm vụ tháng trước",
+              "point": 2.5
+            },
+            {
+              "name": "Đánh giá theo hướng dẫn mẫu",
+              "point": 2.5
+            },
+            {
+              "name": "Kết thúc sinh hoạt đầy đủ",
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "name": "Thực hiện đầy đủ nội dung sinh hoạt chi bộ",
+          "point": 15,
+          "substeps": [
+            {
+              "name": "Công tác chính trị tư tưởng",
+              "point": 1
+            },
+            {
+              "name": "Thông báo chủ trương, văn bản cấp trên",
+              "point": 1
+            },
+            {
+              "name": "Đánh giá tình hình tư tưởng đảng viên, quần chúng",
+              "point": 1
+            },
+            {
+              "name": "Nêu gương cán bộ, đảng viên",
+              "point": 1
+            },
+            {
+              "name": "Đánh giá công tác lãnh đạo nhiệm vụ chính trị",
+              "point": 13
+            },
+            {
+              "name": "Thực hiện nghị quyết, học tập tư tưởng HCM",
+              "point": 4
+            },
+            {
+              "name": "Thực hiện nghị quyết Đại hội XIII, cấp huyện, xã",
+              "point": 1
+            },
+            {
+              "name": "Công tác dân vận, kiểm tra, giám sát, kỷ luật",
+              "point": 2
+            },
+            {
+              "name": "Xác định vấn đề, biện pháp khắc phục",
+              "point": 1
+            },
+            {
+              "name": "Đảng viên phát biểu ý kiến (số lần)",
+              "point": 6
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  
+  "members": [
+    {
+      "chibo": "Chi bộ thôn Kim Đới 2",
+      "so_dang_vien": 36,
+      "danhsach": [
+        { "stt": 1, "hoten": "Phạm Minh Nhừ", "ngaysinh": "11/04/1946", "gioitinh": "Nam", "ngayvao_dang": "13/04/1965", "ngaychinhthuc": "13/04/1966", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 2, "hoten": "Vũ Quang Chênh", "ngaysinh": "15/08/1950", "gioitinh": "Nam", "ngayvao_dang": "23/06/1973", "ngaychinhthuc": "23/03/1974", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 3, "hoten": "Đỗ Văn Chéo", "ngaysinh": "20/09/1950", "gioitinh": "Nam", "ngayvao_dang": "06/05/1985", "ngaychinhthuc": "06/11/1986", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 4, "hoten": "Vũ Thị Khiên", "ngaysinh": "12/03/1959", "gioitinh": "Nữ", "ngayvao_dang": "23/11/1979", "ngaychinhthuc": "23/05/1981", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 5, "hoten": "Đặng Văn Dực", "ngaysinh": "10/03/1955", "gioitinh": "Nam", "ngayvao_dang": "26/05/1975", "ngaychinhthuc": "26/02/1976", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 6, "hoten": "Phạm Thị Cửa (Hiển)", "ngaysinh": "12/08/1955", "gioitinh": "Nữ", "ngayvao_dang": "10/12/1983", "ngaychinhthuc": "10/06/1985", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 7, "hoten": "Vũ Thị Dưỡng", "ngaysinh": "08/06/1940", "gioitinh": "Nữ", "ngayvao_dang": "01/05/1969", "ngaychinhthuc": "01/05/1970", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 8, "hoten": "Đặng Văn Tính", "ngaysinh": "14/08/1976", "gioitinh": "Nam", "ngayvao_dang": "03/10/1995", "ngaychinhthuc": "03/10/1996", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 9, "hoten": "Phạm Văn Công", "ngaysinh": "15/08/1983", "gioitinh": "Nam", "ngayvao_dang": "14/11/2005", "ngaychinhthuc": "14/11/2006", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 10, "hoten": "Phạm Văn Hải (A)", "ngaysinh": "20/10/1947", "gioitinh": "Nam", "ngayvao_dang": "18/12/1969", "ngaychinhthuc": "18/09/1970", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 11, "hoten": "Phạm Thị Tâm", "ngaysinh": "19/08/1957", "gioitinh": "Nữ", "ngayvao_dang": "03/06/1994", "ngaychinhthuc": "03/06/1995", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 12, "hoten": "Nguyễn Văn Hướng", "ngaysinh": "06/05/1958", "gioitinh": "Nam", "ngayvao_dang": "01/01/1979", "ngaychinhthuc": "01/07/1980", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 13, "hoten": "Đặng Văn Mải", "ngaysinh": "10/05/1962", "gioitinh": "Nam", "ngayvao_dang": "17/01/1984", "ngaychinhthuc": "17/07/1985", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 14, "hoten": "Ngô Xuân Mạnh", "ngaysinh": "16/01/1966", "gioitinh": "Nam", "ngayvao_dang": "10/12/1986", "ngaychinhthuc": "10/12/1987", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 15, "hoten": "Vũ Văn Trang", "ngaysinh": "15/08/1946", "gioitinh": "Nam", "ngayvao_dang": "22/03/1967", "ngaychinhthuc": "22/03/1968", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 16, "hoten": "Nguyễn Thị Xuyên", "ngaysinh": "20/06/1958", "gioitinh": "Nữ", "ngayvao_dang": "26/10/1987", "ngaychinhthuc": "26/10/1988", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 17, "hoten": "Phan Quý Dương", "ngaysinh": "17/11/1992", "gioitinh": "Nam", "ngayvao_dang": "19/05/2013", "ngaychinhthuc": "19/05/2014", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 18, "hoten": "Ngô Duy Na", "ngaysinh": "20/06/1955", "gioitinh": "Nam", "ngayvao_dang": "14/06/1987", "ngaychinhthuc": "14/06/1988", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 19, "hoten": "Ngô Văn Nam", "ngaysinh": "15/04/1990", "gioitinh": "Nam", "ngayvao_dang": "19/05/2012", "ngaychinhthuc": "19/05/2013", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 20, "hoten": "Vũ Quốc Huấn", "ngaysinh": "19/09/1992", "gioitinh": "Nam", "ngayvao_dang": "07/11/2015", "ngaychinhthuc": "07/11/2016", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 21, "hoten": "Nguyễn Thị Linh", "ngaysinh": "20/06/1960", "gioitinh": "Nữ", "ngayvao_dang": "19/11/1990", "ngaychinhthuc": "19/11/1991", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 22, "hoten": "Bùi Văn Huy", "ngaysinh": "19/05/1994", "gioitinh": "Nam", "ngayvao_dang": "29/01/2016", "ngaychinhthuc": "29/01/2017", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 23, "hoten": "Phạm Thị Hải Lý", "ngaysinh": "10/02/1959", "gioitinh": "Nữ", "ngayvao_dang": "01/12/1984", "ngaychinhthuc": "01/06/1986", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 24, "hoten": "Bùi Văn Hùng", "ngaysinh": "02/09/1968", "gioitinh": "Nam", "ngayvao_dang": "03/06/2017", "ngaychinhthuc": "03/06/2018", "chucvu": "Phó Bí thư chi bộ", "ghi_chu": "1" },
+        { "stt": 25, "hoten": "Phạm Văn Phiên", "ngaysinh": "21/06/1997", "gioitinh": "Nam", "ngayvao_dang": "22/12/2017", "ngaychinhthuc": "22/12/2018", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 26, "hoten": "Đặng Văn Toản", "ngaysinh": "20/04/1998", "gioitinh": "Nam", "ngayvao_dang": "19/05/2018", "ngaychinhthuc": "19/05/2019", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 27, "hoten": "Đặng Thị Xoa", "ngaysinh": "20/06/1966", "gioitinh": "Nữ", "ngayvao_dang": "03/01/2001", "ngaychinhthuc": "03/01/2002", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 28, "hoten": "Ngô Thị Hiến", "ngaysinh": "15/06/1971", "gioitinh": "Nữ", "ngayvao_dang": "08/09/2019", "ngaychinhthuc": "08/09/2020", "chucvu": "Chi uỷ viên", "ghi_chu": "1" },
+        { "stt": 29, "hoten": "Trịnh Thị Hải", "ngaysinh": "01/11/1965", "gioitinh": "Nữ", "ngayvao_dang": "19/05/1999", "ngaychinhthuc": "19/05/2000", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 30, "hoten": "Ngô Văn Tú", "ngaysinh": "19/04/1998", "gioitinh": "Nam", "ngayvao_dang": "06/02/2022", "ngaychinhthuc": "06/02/2023", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 31, "hoten": "Đặng Văn Ước", "ngaysinh": "27/06/1992", "gioitinh": "Nam", "ngayvao_dang": "19/05/2023", "ngaychinhthuc": "19/05/2024", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 32, "hoten": "Phạm Văn Lấn", "ngaysinh": "08/01/1970", "gioitinh": "Nam", "ngayvao_dang": "05/06/2010", "ngaychinhthuc": "05/06/2011", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 33, "hoten": "Nguyễn Văn Tuyên", "ngaysinh": "27/05/1995", "gioitinh": "Nam", "ngayvao_dang": "03/02/2025", "ngaychinhthuc": null, "chucvu": "Dự bị", "ghi_chu": "0" },
+        { "stt": 34, "hoten": "Ngô Duy Trưởng", "ngaysinh": "30/06/2005", "gioitinh": "Nam", "ngayvao_dang": "19/05/2024", "ngaychinhthuc": "19/05/2025", "chucvu": "Đảng viên", "ghi_chu": "1" },
+        { "stt": 35, "hoten": "Đặng Thanh Lam", "ngaysinh": "03/10/1995", "gioitinh": "Nữ", "ngayvao_dang": "06/11/2016", "ngaychinhthuc": "06/11/2017", "chucvu": "Phó Bí thư Đoàn Thanh niên", "ghi_chu": "Chuyển từ Văn Hóa về Kim Đới 2" },
+        { "stt": 36, "hoten": "Ngô Văn Sứ", "ngaysinh": "13/10/1971", "gioitinh": "Nam", "ngayvao_dang": "10/03/1995", "ngaychinhthuc": "10/03/1996", "chucvu": "Đảng viên", "ghi_chu": "Chuyển từ Phòng KT về" }
+      ]
+    }
+  ],
+  "baocao": []
+}

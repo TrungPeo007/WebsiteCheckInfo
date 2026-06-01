@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hệ Thống Điều Hành Đảng Bộ</title>
+
+    <link rel="stylesheet" href="/CSS/hethong.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="header-left">
+
+            <div class="logo">
+                <i class="fa-solid fa-hammer-sickle"></i>
+            </div>
+
+            <div class="header-text">
+
+                <h1>ĐẢNG BỘ XÃ KIẾN THỤY</h1>
+
+                <h2>HỆ THỐNG ĐIỀU HÀNH ĐẢNG BỘ</h2>
+
+                <p>
+                    ĐOÀN KẾT - DÂN CHỦ - KỶ CƯƠNG - ĐỔI MỚI - PHÁT TRIỂN
+                </p>
+
+            </div>
+            <div class="header-right-menu">
+
+                <button class="btn-thoat" onclick="window.location.href='/index'">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Thoát
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="header-user">
+
+            <div class="user-box" onclick="toggleMenu()">
+
+                <img src="https://i.pravatar.cc/100">
+
+                <div class="user-info">
+
+                    <h4 id="tenUser">Nguyễn Văn Tiến</h4>
+
+                    <span id="chucVu">Bí thư CB Văn Cao</span>
+
+                </div>
+
+                <div class="logout-menu" id="logoutMenu">
+
+                    <button onclick="thoatTrang(event)">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Thoát
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN -->
+
+    <div class="main">
+
+        <!-- CARD 1 -->
+
+        <div class="card red">
+
+            <div class="card-title">
+
+                <i class="fa-solid fa-flag"></i>
+
+                <h2>
+                    1. ĐIỀU HÀNH VÀ
+                    <br>
+                    SINH HOẠT ĐẢNG
+                </h2>
+
+            </div>
+
+            <div class="menu-box">
+
+                <div class="menu-item">
+
+                    <div class="menu-left">
+
+                        <div class="icon red-icon">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>SỔ TAY ĐẢNG VIÊN</h3>
+
+                            <p>
+                                Quản lý thông tin, tài liệu học tập và sinh hoạt của đảng viên
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <i class="fa-solid fa-angle-right arrow"></i>
+
+                </div>
+
+                <a href="/chitietchamdiem" class="menu-item">
+
+                    <div class="menu-left">
+
+                        <div class="icon red-icon">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+
+                        <div>
+                            <h3>
+                                CHẤM ĐIỂM ĐÁNH GIÁ
+                                CHẤT LƯỢNG SINH
+                                HOẠT CHI BỘ
+                            </h3>
+
+                            <p>
+                                Đánh giá, chấm điểm và xếp loại chất lượng sinh hoạt chi bộ
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <i class="fa-solid fa-angle-right arrow"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="card blue">
+
+            <div class="card-title">
+
+                <i class="fa-solid fa-file-pen"></i>
+
+                <h2>
+                    2. DỊCH VỤ CÔNG VÀ
+                    <br>
+                    TTHC ĐẢNG
+                </h2>
+
+            </div>
+
+            <div class="menu-box">
+
+                <div class="menu-item">
+                    <div class="menu-left">
+
+                        <div class="icon blue-icon">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+
+                        <div>
+                            <h3>THU, NỘP ĐẢNG PHÍ</h3>
+                            <p>Kê khai, nộp đảng phí đúng quy định</p>
+                        </div>
+
+                    </div>
+
+                    <i class="fa-solid fa-angle-right arrow"></i>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-left">
+
+                        <div class="icon blue-icon">
+                            <i class="fa-solid fa-rotate"></i>
+                        </div>
+
+                        <div>
+                            <h3>CHUYỂN SINH HOẠT ĐẢNG</h3>
+                            <p>Nộp hồ sơ, theo dõi xử lý trực tuyến</p>
+                        </div>
+
+                    </div>
+
+                    <i class="fa-solid fa-angle-right arrow"></i>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-left">
+
+                        <div class="icon blue-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div>
+                            <h3>CHUYỂN SINH HOẠT ĐẢNG CHÍNH THỨC</h3>
+                            <p>Nộp hồ sơ trực tuyến</p>
+                        </div>
+
+                    </div>
+
+                    <i class="fa-solid fa-angle-right arrow"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="card green">
+
+            <div class="card-title">
+
+                <i class="fa-solid fa-chart-simple"></i>
+
+                <h2>
+                    3. CHẾ ĐỘ BÁO CÁO
+                    <br>
+                    TỔ CHỨC ĐẢNG
+                </h2>
+
+            </div>
+
+            <div class="center-box">
+
+                <i class="fa-solid fa-file-lines report-icon"></i>
+
+                <h3>BÁO CÁO THEO QUY ĐỊNH</h3>
+
+                <p>
+                    Thực hiện báo cáo định kỳ,
+                    báo cáo chuyên đề theo quy định
+                    của Đảng cấp trên
+                </p>
+
+                <button>
+                    TRUY CẬP
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="card purple">
+
+            <div class="card-title">
+
+                <i class="fa-solid fa-globe"></i>
+
+                <h2>
+                    4. CỔNG THÔNG TIN
+                    <br>
+                    CỦA ĐẢNG
+                </h2>
+
+            </div>
+
+            <div class="menu-box">
+
+                <div class="menu-item">
+
+                    <div class="menu-left">
+
+                        <div class="icon purple-icon">
+                            <i class="fa-solid fa-landmark"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>KIẾN THỤY HOA CỦA ĐẤT</h3>
+
+                            <p>
+                                Trang thông tin tuyên truyền giới thiệu lịch sử văn hóa
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <i class="fa-solid fa-angle-right arrow"></i>
+
+                </div>
+
+                <div class="menu-item">
+
+                    <div class="menu-left">
+
+                        <div class="icon purple-icon">
+                            <i class="fa-solid fa-comment"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>ZALO OA BAN XÂY DỰNG ĐẢNG</h3>
+
+                            <p>
+                                Kênh thông tin chính thức trên Zalo OA
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <i class="fa-solid fa-angle-right arrow"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <div>
+            <i class="fa-solid fa-shield-halved"></i>
+            Bảo mật - Chính xác - Kịp thời - Hiệu quả
+        </div>
+
+        <div>
+            <i class="fa-solid fa-computer"></i>
+            Nền tảng số phục vụ công tác Đảng
+        </div>
+
+        <div>
+            <i class="fa-solid fa-circle-info"></i>
+            Hỗ trợ: Ngô Thị Thư - SDT: 0982596042
+        </div>
+
+    </div>
+
+</body>
+
+</html>

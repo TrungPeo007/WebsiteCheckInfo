@@ -1,0 +1,525 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Nunito',sans-serif;
+}
+
+body{
+    background:#f3f4f6;
+    color:#333;
+    font-size:14px;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    width:100%;
+    height:150px;
+    background:linear-gradient(to right,#c50000,#e00000);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 35px;
+    overflow:hidden;
+}
+
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.logo i{
+    font-size:70px;
+    color:#ffd700;
+}
+
+
+.header-text h1{
+    font-size:38px;
+    font-weight:900;
+    color:#ffd700;
+    line-height:1.1;
+}
+
+.header-text h2{
+    font-size:32px;
+    color:white;
+    margin-top:5px;
+}
+
+.header-text p{
+    font-size:15px;
+    color:#ffd700;
+    margin-top:8px;
+    letter-spacing:1px;
+    font-weight:600;
+}
+.header-user{
+    display:flex;
+    align-items:center;
+    margin-right:20px;
+}
+
+.user-box{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+    background:rgba(255,255,255,0.15);
+    padding:10px 15px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.user-box:hover{
+    background:rgba(255,255,255,0.25);
+}
+
+.user-box img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid white;
+}
+
+.user-info h4{
+    color:white;
+    font-size:16px;
+    margin-bottom:3px;
+}
+
+.user-info span{
+    color:#ffe082;
+    font-size:13px;
+}
+
+.header-right img{
+    width:520px;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ================= MAIN ================= */
+
+.main{
+    width:98%;
+    margin:15px auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+/* ================= CARD ================= */
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid #e5e5e5;
+    box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:16px 18px;
+    color:white;
+}
+
+.card-title i{
+    font-size:28px;
+}
+
+.card-title h2{
+    font-size:16px;
+    line-height:1.4;
+    font-weight:700;
+}
+
+.red .card-title{
+    background:#d70000;
+}
+
+.blue .card-title{
+    background:#0057d8;
+}
+
+.green .card-title{
+    background:#1aa32a;
+}
+
+.purple .card-title{
+    background:#6b2bc5;
+}
+
+/* ================= MENU ================= */
+
+.menu-box{
+    padding:15px;
+}
+
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 8px;
+    border-bottom:1px solid #eee;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.menu-item:last-child{
+    border-bottom:none;
+}
+
+.menu-item:hover{
+    background:#fafafa;
+}
+
+.menu-left{
+    display:flex;
+    gap:15px;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:22px;
+    flex-shrink:0;
+}
+
+.red-icon{
+    background:#d70000;
+}
+
+.blue-icon{
+    background:#0057d8;
+}
+
+.purple-icon{
+    background:#6b2bc5;
+}
+.menu-item{
+    text-decoration:none;
+    color:inherit;
+}
+.menu-item h3{
+    font-size:15px;
+    line-height:1.4;
+    margin-bottom:6px;
+    font-weight:700;
+}
+
+.menu-item p{
+    font-size:13px;
+    color:#666;
+    line-height:1.5;
+}
+
+.arrow{
+    font-size:18px;
+    color:#888;
+}
+
+/* ================= CENTER CARD ================= */
+.menu-item:hover{
+    background:#fff5f5;
+    transform:translateX(8px);
+}
+
+.menu-item:hover h3{
+    color:#d60000;
+}
+
+.menu-item:hover p{
+    color:#d60000;
+}
+
+.menu-item:hover .arrow{
+    color:#d60000;
+    transform:translateX(5px);
+}
+.center-box{
+    text-align:center;
+    padding:30px 20px;
+}
+
+.report-icon{
+    font-size:90px;
+    color:#1aa32a;
+    margin-bottom:20px;
+}
+
+.center-box h3{
+    font-size:20px;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.center-box p{
+    font-size:14px;
+    line-height:1.7;
+    color:#555;
+}
+
+.center-box button{
+    margin-top:30px;
+    padding:12px 28px;
+    border:2px solid #1aa32a;
+    border-radius:8px;
+    background:white;
+    color:#1aa32a;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.center-box button:hover{
+    background:#1aa32a;
+    color:white;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    width:100%;
+    background:white;
+    border-top:1px solid #ddd;
+
+    padding:12px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    font-size:14px;
+    color:#c40000;
+    font-weight:600;
+}
+
+.footer i{
+    margin-right:6px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+    .main{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .main{
+        grid-template-columns:1fr;
+    }
+
+    .footer{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .header{
+        height:auto;
+        flex-direction:column;
+    }
+.header{
+    position:relative;
+}
+
+.header-right-menu{
+    position:absolute;
+    top:20px;
+    right:30px;
+}
+
+.btn-thoat{
+    border:none;
+    background:white;
+    color:#c70000;
+    padding:10px 18px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+}
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    position:relative;
+}
+
+.header-user{
+    display:flex;
+    align-items:center;
+}
+
+.user-box{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+    background:rgba(255,255,255,0.15);
+    padding:10px 15px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.user-box:hover{
+    background:rgba(255,255,255,0.25);
+}
+
+.user-box img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border:2px solid white;
+}
+
+.user-info h4{
+    color:white;
+    font-size:16px;
+    margin-bottom:3px;
+}
+
+.user-info span{
+    color:#ffe082;
+    font-size:13px;
+}
+
+.logout-menu{
+    display:none;
+    position:absolute;
+    top:70px;
+    right:0;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    min-width:140px;
+}
+
+.logout-menu button{
+    width:100%;
+    border:none;
+    background:white;
+    padding:12px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.logout-menu button:hover{
+    background:#f5f5f5;
+    color:#d60000;
+}
+
+.logout-menu.show{
+    display:block;
+}
+.btn-thoat:hover{
+    background:#c70000;
+    color:white;
+    transform:translateY(-2px);
+}
+
+.btn-thoat i{
+    margin-right:8px;
+}
+/* ================= MENU THOÁT ================= */
+
+.logout-menu{
+    display:none;
+    position:absolute;
+    top:70px;
+    right:0;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    min-width:150px;
+    z-index:1000;
+}
+
+.logout-menu.show{
+    display:block;
+}
+
+.logout-menu button{
+    width:100%;
+    border:none;
+    background:white;
+    padding:12px;
+    cursor:pointer;
+    font-weight:700;
+    font-size:14px;
+}
+
+.logout-menu button:hover{
+    background:#f5f5f5;
+    color:#d60000;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+    .main{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .main{
+        grid-template-columns:1fr;
+    }
+
+    .footer{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .header{
+        height:auto;
+        flex-direction:column;
+        padding:20px;
+        gap:20px;
+    }
+
+    .header-left{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .header-text h1{
+        font-size:26px;
+    }
+
+    .header-text h2{
+        font-size:22px;
+    }
+
+    .header-user{
+        margin-right:0;
+    }
+}
+}

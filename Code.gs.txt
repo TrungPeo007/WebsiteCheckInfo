@@ -1,0 +1,41 @@
+const SHEET_ID = "1Llqex3ioZVjliTijyA3vMtO40xL_PdUom_Z2ZSXyBQ0";
+
+/* ================= LOGIN ================= */
+function checkLogin(user, pass) {
+  const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName("TAIKHOAN");
+  if (!sheet) return false;
+
+  const data = sheet.getDataRange().getValues();
+
+  for (let i = 1; i < data.length; i++) {
+    if (data[i][0] == user && data[i][1] == pass) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/* ================= ROUTER ================= */
+function doGet(e) {
+  const page = (e && e.parameter && e.parameter.page)
+    ? e.parameter.page.toLowerCase()
+    : "index";
+
+  const routes = {
+    index: "Index",
+    login: "Login",
+    chonchibo: "ChonChiBo",
+    chamdiem: "ChamDiem"
+  };
+
+  const file = routes[page] || "Index";
+
+  return HtmlService.createHtmlOutputFromFile(file)
+    .setTitle("Hệ thống điều hành Đảng bộ")
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+
+/* ================= URL ================= */
+function getScriptURL() {
+  return ScriptApp.getService().getUrl();
+}

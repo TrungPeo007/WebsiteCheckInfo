@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hệ thống điều hành Đảng bộ</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="/Images/co-dang-cong-san-viet-nam-vector-removebg-preview.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="top-banner">
+
+        <div class="left-banner">
+
+            <div class="logo">
+                <img src="/Images/co-dang-cong-san-viet-nam-vector-removebg-preview.png" width="200px" height="100px">
+            </div>
+
+            <div class="banner-text">
+                <h1>HỆ THỐNG ĐIỀU HÀNH ĐẢNG BỘ XÃ KIẾN THỤY</h1>
+                <p>ĐOÀN KẾT - DÂN CHỦ - KỶ CƯƠNG - ĐỔI MỚI - PHÁT TRIỂN</p>
+            </div>
+
+        </div>
+
+        <div class="right-user">
+
+            <div class="notify">
+                <i class="fa-regular fa-bell"></i>
+                <div class="badge">12</div>
+            </div>
+
+            <div class="user-box" onclick="toggleMenu()">
+
+                <img src="https://i.pravatar.cc/100">
+
+                <div>
+                    <h4 id="tenUser"></h4>
+                    <span id="chucVu"></span>
+                </div>
+
+                <div class="logout-menu" id="logoutMenu">
+                    <button onclick="dangXuat(event)">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Đăng xuất
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- MENU -->
+    <nav class="menu">
+
+        <div class="menu-item active">
+            <i class="fa-solid fa-house"></i>
+            TRANG CHỦ
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-regular fa-user"></i>
+            SINH HOẠT ĐẢNG
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-solid fa-building-columns"></i>
+            DỊCH VỤ CÔNG
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-regular fa-clipboard"></i>
+            BÁO CÁO
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-regular fa-newspaper"></i>
+            CỔNG THÔNG TIN
+        </div>
+
+    </nav>
+
+    <!-- MAIN -->
+    <div class="container">
+
+        <!-- THỐNG KÊ -->
+        <div class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon red">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+                    <h5>TỔNG SỐ ĐẢNG VIÊN</h5>
+                    <h2>685</h2>
+                    <p>▲ 12 so với tháng trước</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <div>
+                    <h5>TỔNG SỐ CHI BỘ</h5>
+                    <h2>25</h2>
+                    <p>▲ 1 so với tháng trước</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-file"></i>
+                </div>
+
+                <div>
+                    <h5>TỶ LỆ HOÀN THÀNH BÁO CÁO</h5>
+                    <h2>98%</h2>
+                    <p>▲ 8% so với tháng trước</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+
+                <div>
+                    <h5>TỶ LỆ NỘP ĐẢNG PHÍ</h5>
+                    <h2>96%</h2>
+                    <p>▲ 5% so với tháng trước</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- GRID -->
+        <div class="main-grid">
+
+            <!-- LEFT -->
+            <div class="left-content">
+
+                <!-- BIỂU ĐỒ -->
+                <div class="card">
+
+                    <div class="card-title">
+                        BIỂU ĐỒ THEO DÕI
+                    </div>
+
+                    <div class="chart-grid">
+
+                        <div class="chart-box">
+                            <h4>CHẤT LƯỢNG SINH HOẠT CHI BỘ</h4>
+
+                            <div class="fake-chart">
+                                <div class="line"></div>
+
+                                <div class="point p1">72</div>
+                                <div class="point p2">75</div>
+                                <div class="point p3">78</div>
+                                <div class="point p4">82</div>
+                                <div class="point p5">84</div>
+                                <div class="point p6">86</div>
+                            </div>
+                        </div>
+
+                        <div class="chart-box">
+                            <h4>TỶ LỆ XẾP LOẠI CHI BỘ</h4>
+
+                            <div class="circle-chart"></div>
+
+                            <div class="legend">
+                                <div><span class="dot green-bg"></span> Xuất sắc</div>
+                                <div><span class="dot blue-bg"></span> Tốt</div>
+                                <div><span class="dot orange-bg"></span> Khá</div>
+                                <div><span class="dot red-bg"></span> Trung bình</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- TRUY CẬP -->
+                <div class="card">
+
+                    <div class="card-title">
+                        TRUY CẬP NHANH
+                    </div>
+
+                    <div class="quick-grid">
+
+                        <div class="quick-item">
+                            <div class="quick-icon red">
+                                <i class="fa-solid fa-book"></i>
+                            </div>
+                            <p>SỔ TAY ĐẢNG VIÊN</p>
+                        </div>
+
+                        <div class="quick-item" onclick="window.location.href='/hethongquanly'">
+
+                            <div class="quick-icon orange">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <p>CHẤM ĐIỂM SINH HOẠT CHI BỘ</p>
+
+                        </div>
+
+                        <div class="quick-item">
+                            <div class="quick-icon green">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+                            <p>THU NỘP ĐẢNG PHÍ</p>
+                        </div>
+
+                        <div class="quick-item">
+                            <div class="quick-icon blue">
+                                <i class="fa-solid fa-file"></i>
+                            </div>
+                            <p>CHẾ ĐỘ BÁO CÁO</p>
+                        </div>
+
+                        <div class="quick-item">
+                            <div class="quick-icon purple">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            <p>KHO DỮ LIỆU</p>
+                        </div>
+
+                        <div class="quick-item">
+                            <div class="quick-icon cyan">
+                                <i class="fa-solid fa-calendar"></i>
+                            </div>
+                            <p>LỊCH CÔNG TÁC</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="right-content">
+
+                <div class="card">
+
+                    <div class="thongbao-header">
+                        <h3>THÔNG BÁO MỚI</h3>
+                        <span>Xem tất cả</span>
+                    </div>
+
+                    <div class="notify-item">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        <p>Kế hoạch sinh hoạt chuyên đề Quý II/2024</p>
+                    </div>
+
+                    <div class="notify-item">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        <p>Thông báo nộp báo cáo tháng 5/2024</p>
+                    </div>
+
+                    <div class="notify-item">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        <p>Hướng dẫn chấm điểm chi bộ</p>
+                    </div>
+
+                    <div class="notify-item">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        <p>Lịch công tác tuần mới</p>
+                    </div>
+
+                </div>
+
+                <!-- BANNER -->
+                <div class="mini-banner">
+
+                    <div>
+                        <h2>KIẾN THỤY - HOA CỦA ĐẤT</h2>
+                        <p>Nơi hội tụ truyền thống anh hùng <br> và khát vọng vươn lên</p>
+
+                        <button>Xem chi tiết</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <span>© 2024 Đảng bộ xã Kiến Thụy All rights reserve</span>
+        <span>Hotline: 0225 1234 567</span>
+        <span>Email: danguykienthuy@haiphong.gov.vn</span>
+
+    </footer>
+
+</body>
+<script src="/JS/index.js"></script>
+
+</html>

@@ -1,0 +1,72 @@
+:root{
+  --do:#c40000;
+  --xanh:#1565c0;
+  --cam:#ff9800;
+  --la:#2e7d32;
+  --nen:#f3f5f9;
+  --vien:#e5e7eb;
+  --shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+body{
+  background:var(--nen);
+  font-family:"Nunito",sans-serif;
+  padding:20px;
+}
+
+h1{
+  color:var(--do);
+  margin-bottom:20px;
+  text-align:center;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:white;
+  box-shadow:var(--shadow);
+  border-radius:10px;
+  overflow:hidden;
+}
+
+th,td{
+  border:1px solid var(--vien);
+  padding:10px;
+  text-align:center;
+}
+
+th{
+  background:var(--xanh);
+  color:white;
+}
+
+input[type="number"]{
+  width:60px;
+  padding:5px;
+  border:1px solid var(--vien);
+  border-radius:5px;
+}
+
+.btn{
+  margin-top:20px;
+  padding:10px 20px;
+  background:var(--do);
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.result{
+  margin-top:20px;
+  padding:15px;
+  background:white;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+}
+
+.excellent{color:var(--la);}
+.good{color:var(--xanh);}
+.average{color:var(--cam);}
+.poor{color:var(--do);}
