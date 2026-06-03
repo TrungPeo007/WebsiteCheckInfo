@@ -486,40 +486,139 @@ body{
     }
 
 }
+/* Thiết lập vị trí cho container chứa dropdown */
+/* Container bọc ngoài menu item */
+.menu-item-dropdown {
+    position: relative;
+    height: 70px; /* Bằng chiều cao của thanh menu */
+    display: flex;
+    align-items: center;
+}
 
-@media(max-width:768px){
+/* Style cho icon mũi tên */
+.icon-arrow {
+    font-size: 12px; 
+    margin-left: 5px;
+    transition: transform 0.3s ease; /* Tạo hiệu ứng xoay mượt mà */
+}
 
-    .top-banner{
-        flex-direction:column;
-        height:auto;
-        padding:20px;
-        gap:20px;
-        text-align:center;
-    }
-
-    .menu{
-        overflow:auto;
-        gap:25px;
-    }
-
-    .stats{
-        grid-template-columns:1fr;
-    }
-
-    .chart-grid{
-        grid-template-columns:1fr;
-    }
-
-    .quick-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .footer{
-        flex-direction:column;
-        height:auto;
-        padding:15px;
-        gap:10px;
-    }
+.dropdown-menu {
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    background-color: var(--do);
     
+    /* ================= SỬA CHỖ NÀY ================= */
+    width: 100%; /* Thay vì min-width cố định, dùng 100% để rộng bằng menu cha */
+    /* =============================================== */
+    
+    list-style: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: var(--shadow);
+    padding: 5px 0;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+/* Các mục liên kết bên trong dropdown */
+.dropdown-menu li a {
+    color: white !important;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
 
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.menu-item-dropdown {
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+/* Đảm bảo menu-item bên trong chiếm hết 100% chiều cao để ăn khớp border-bottom */
+.menu-item-dropdown .menu-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ================= HIỆU ỨNG HOVER SỬA LẠI ĐỒNG BỘ ================= */
+
+/* Khi hover vào vùng dropdown: Hiển thị menu con */
+.menu-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Khi hover vào: Đổi màu chữ và border-bottom của menu-item sang màu đỏ hệ thống */
+.menu-item-dropdown:hover .menu-item {
+    color: var(--do) !important;
+    border-color: var(--do) !important;
+}
+
+/* Khi hover vào: Xoay ngược mũi tên */
+.menu-item-dropdown:hover .icon-arrow {
+    transform: rotate(180deg);
+}
+/* Thiết lập vị trí tương đối cho thẻ li chứa menu con */
+.dropdown-menu li.has-submenu {
+    position: relative;
+}
+
+/* Định dạng cho mũi tên chỉ sang phải của menu cấp 2 */
+.submenu-arrow {
+    margin-left: auto; /* Đẩy mũi tên về sát rìa bên phải */
+    font-size: 11px;
+    opacity: 0.7;
+    transition: transform 0.2s ease;
+}
+
+/* Cấu hình menu đổ ngang (Submenu cấp 2) */
+.dropdown-menu .submenu-side {
+    position: absolute;
+    top: -5px;       /* Đẩy menu con lên bằng khít mép trên của menu cha (vì menu cha có padding: 5px) */
+    left: 100%;      /* Áp sát vào cạnh phải của menu cha */
+    background-color: var(--do);
+    min-width: 240px; 
+    list-style: none;
+    border-radius: 8px; /* Bo tròn đều cả 4 góc cho đẹp mắt */
+    box-shadow: var(--shadow);
+    padding: 5px 0;
+    
+    /* TRÁNH BỊ HỞ CHUỘT: Thêm một vùng đệm vô hình bên trái để di chuột không bao giờ bị mất menu */
+    border-left: 5px solid transparent; 
+    
+    /* HIỆU ỨNG MƯỢT MÀ: Kết hợp làm mờ và hiệu ứng phóng to nhẹ (Scale) */
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95); 
+    transform-origin: left top; /* Hiệu ứng sẽ xuất phát từ góc trên bên trái đổ ra */
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+}
+/* ================= HIỆU ỨNG HOVER ĐỔ NGANG ================= */
+
+/* ================= HIỆU ỨNG HOVER KHI HIỂN THỊ ================= */
+.dropdown-menu li.has-submenu:hover .submenu-side {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1); /* Trở về kích thước chuẩn đầy đủ */
+}
+/* Hiệu ứng xoay nhẹ mũi tên nhỏ khi hover */
+.dropdown-menu li.has-submenu:hover .submenu-arrow {
+    transform: rotate(90deg);
 }

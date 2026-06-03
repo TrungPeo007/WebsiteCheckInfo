@@ -1,41 +1,46 @@
 {
   "taikhoan": [
-    {
-      "user": "Vancao",
-      "pass": "123456",
-      "hoten": "Nguyễn Văn Tiến",
-      "chibo": "Bí thư CB Văn Cao",
-      "role": "bithu"
-    },
-    {
-      "user": "Vanhoa",
-      "pass": "123456",
-      "hoten": "Nguyễn Văn Thuệ",
-      "chibo": "Bí thư CB Văn Hóa",
-      "role": "bithu"
-    },
-    {
-      "user": "Kimdoi1",
-      "pass": "123456",
-      "hoten": "Nguyễn Văn Khiên",
-      "chibo": "Bí thư CB Kim Đới 1",
-      "role": "bithu"
-    },
-     {
-      "user": "Kimdoi2",
-      "pass": "123456",
-      "hoten": "Đặng Thị Xoa",
-      "chibo": "Bí thư CB Kim Đới 2",
-      "role": "bithu"
-    },
-    {
-      "user": "BXD",
-      "pass": "123456",
-      "hoten": "Ngô Thị Thư",
-      "chibo": "admin tổng hợp",
-      "role": "admin"
-    }
-  ],
+  {
+    "user": "Vancao",
+    "pass": "123456",
+    "hoten": "Nguyễn Văn Tiến",
+    "chibo": "Chi bộ Văn Cao",
+    "chucvu": "Bí thư chi bộ",
+    "role": "bithu"
+  },
+  {
+    "user": "Vanhoa",
+    "pass": "123456",
+    "hoten": "Nguyễn Văn Thuệ",
+    "chibo": "Chi bộ Văn Hóa",
+    "chucvu": "Bí thư chi bộ",
+    "role": "bithu"
+  },
+  {
+    "user": "Kimdoi1",
+    "pass": "123456",
+    "hoten": "Nguyễn Văn Khiên",
+    "chibo": "Chi bộ Kim Đới 1",
+    "chucvu": "Bí thư chi bộ",
+    "role": "bithu"
+  },
+  {
+    "user": "Kimdoi2",
+    "pass": "123456",
+    "hoten": "Đặng Thị Xoa",
+    "chibo": "Chi bộ Kim Đới 2",
+    "chucvu": "Bí thư chi bộ",
+    "role": "bithu"
+  },
+  {
+    "user": "BXD",
+    "pass": "123456",
+    "hoten": "Ngô Thị Thư",
+    "chibo": "Văn phòng Đảng ủy",
+    "chucvu": "Quản trị hệ thống",
+    "role": "admin"
+  }
+],
   "chamdiem": [
     {
       "id": "I",

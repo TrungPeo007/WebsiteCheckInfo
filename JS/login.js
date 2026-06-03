@@ -1,86 +1,45 @@
 const matKhau = document.getElementById("pass");
 const conMat = document.getElementById("eye");
 
+/* Ẩn / hiện mật khẩu */
 conMat.addEventListener("click", function () {
 
-    if (matKhau.type == "password") {
+    if (matKhau.type === "password") {
 
         matKhau.type = "text";
+        conMat.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`;
 
-        conMat.innerHTML = `
-        <i class="fa-solid fa-eye-slash"></i>
-        `;
-
-    } 
-    
-    else {
+    } else {
 
         matKhau.type = "password";
-
-        conMat.innerHTML = `
-        <i class="fa-solid fa-eye"></i>
-        `;
-
+        conMat.innerHTML = `<i class="fa-solid fa-eye"></i>`;
     }
 
 });
-async function dangNhap(){
 
-    let user =
-    document.getElementById("user").value;
 
-    let pass =
-    document.getElementById("pass").value;
+/* Đăng nhập */
+async function dangNhap() {
+
+    let user = document.getElementById("user").value.trim();
+    let pass = document.getElementById("pass").value.trim();
 
     const response = await fetch("/login", {
-
         method: "POST",
-
         headers: {
-
-            "Content-Type":
-            "application/json"
+            "Content-Type": "application/json"
         },
-
-        body: JSON.stringify({
-
-            user,
-            pass
-
-        })
-
+        body: JSON.stringify({ user, pass })
     });
 
-    const result =
-    await response.json();
+    const result = await response.json();
 
-    /* ĐĂNG NHẬP THÀNH CÔNG */
+    if (result.success) {
 
-    if(result.success){
 
-        localStorage.setItem(
+        window.location.href = "/index";
 
-            "userData",
-
-            JSON.stringify(
-                result.user
-            )
-
-        );
-
-        window.location.href =
-        "/index";
-
+    } else {
+        alert("Sai tài khoản hoặc mật khẩu");
     }
-
-    /* SAI TÀI KHOẢN */
-
-    else{
-
-        alert(
-            "Sai tài khoản hoặc mật khẩu"
-        );
-
-    }
-
 }
