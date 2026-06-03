@@ -24,7 +24,11 @@ app.get("/", (req, res) => {
     );
 
 });
-
+app.get("/register",(req,res)=>{
+    res.sendFile(
+        path.join(__dirname,"HTML/Register.html")
+    );
+})
 /* ROUTE INDEX */
 
 app.get("/index", (req, res) => {
@@ -35,7 +39,13 @@ app.get("/index", (req, res) => {
 
 });
 /* ROUTE HỆ THỐNG QUẢN LÝ */
+app.get("/chamdiem", (req, res) => {
 
+    res.sendFile(
+        path.join(__dirname, "HTML/HeThongChamDiem.html")
+    );
+
+});
 app.get("/hethongquanly", (req, res) => {
 
     res.sendFile(

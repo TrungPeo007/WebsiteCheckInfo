@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đánh Giá Chất Lượng Sinh Hoạt Chi Bộ</title>
+
+    <link rel="stylesheet" href="/CSS/chamdiem.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+
+            <div class="logo">
+                <i class="fa-solid fa-hammer-sickle"></i>
+            </div>
+
+            <div class="system-name">
+                HỆ THỐNG ĐIỀU HÀNH ĐẢNG BỘ
+            </div>
+
+        </div>
+
+        <div class="header-right">
+
+            <i class="fa-solid fa-circle-user avatar"></i>
+
+            <div class="user-info">
+                <div class="user-name">
+                    Bí thư chi bộ
+                </div>
+
+                <div class="user-unit">
+                    Chi bộ Trường THCS Kiến Thụy
+                </div>
+            </div>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </div>
+    </header>
+
+    <main>
+
+        <div class="page-title">
+
+            <i class="fa-regular fa-clipboard"></i>
+
+            <span>
+                ĐÁNH GIÁ CHẤT LƯỢNG SINH HOẠT CHI BỘ
+            </span>
+
+        </div>
+
+        <div class="top-form">
+
+            <div class="group">
+                <label>Tháng đánh giá</label>
+
+                <select>
+                    <option>05/2026</option>
+                </select>
+            </div>
+
+            <div class="group">
+                <label>Ngày sinh hoạt</label>
+
+                <input type="date" value="2026-05-25">
+            </div>
+
+            <div class="group">
+                <label>Chấm Điểm Các Mục</label>
+
+                <select>
+                    <option>Sinh Hoạt Thường Kỳ</option>
+                    <option>Sinh Hoạt Chuyên Đề</option>
+                </select>
+            </div>
+
+            <div class="group">
+                <label>Số lượng đảng viên</label>
+
+                <input type="text" value="18">
+            </div>
+
+            <button class="reload-btn">
+                TẢI LẠI TIÊU CHÍ
+            </button>
+
+        </div>
+
+        <div class="content">
+
+            <div class="left">
+
+                <div class="card">
+
+                    <div class="card-title">
+                        I. THỜI LƯỢNG SINH HOẠT (5 ĐIỂM)
+                    </div>
+
+                    <div class="member-count">
+                        Số lượng đảng viên của chi bộ:
+                        <b>18 đảng viên</b>
+                    </div>
+
+                    <div class="note">
+                        Áp dụng quy định: Chi bộ có từ 09 đến dưới 30 đảng viên
+                    </div>
+
+                    <label class="row">
+                        <div class="row-left">
+                            <input type="radio" name="time" checked>
+                            <span>Thời gian sinh hoạt từ 80 - 90 phút</span>
+                        </div>
+
+                        <span class="green">5 điểm</span>
+                    </label>
+
+                    <label class="row">
+                        <div class="row-left">
+                            <input type="radio" name="time">
+                            <span>Thời gian sinh hoạt từ 70 - 79 phút</span>
+                        </div>
+
+                        <span class="orange">3 điểm</span>
+                    </label>
+
+                    <label class="row">
+                        <div class="row-left">
+                            <input type="radio" name="time">
+                            <span>Thời gian sinh hoạt dưới 70 phút</span>
+                        </div>
+
+                        <span class="red">1 điểm</span>
+                    </label>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="card-title">
+                        II. TỶ LỆ ĐẢNG VIÊN DỰ SINH HOẠT CHI BỘ (5 ĐIỂM)
+                    </div>
+
+                    <label class="row">
+                        <div class="row-left">
+                            <input type="radio" name="join" checked>
+                            <span>Tỷ lệ từ 90% trở lên</span>
+                        </div>
+
+                        <span class="green">5 điểm</span>
+                    </label>
+
+                    <label class="row">
+                        <div class="row-left">
+                            <input type="radio" name="join">
+                            <span>Tỷ lệ trên 85% đến dưới 90%</span>
+                        </div>
+
+                        <span class="orange">3 điểm</span>
+                    </label>
+
+                    <label class="row">
+                        <div class="row-left">
+                            <input type="radio" name="join">
+                            <span>Tỷ lệ từ 85% trở xuống</span>
+                        </div>
+
+                        <span class="red">1 điểm</span>
+                    </label>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="card-title">
+                        III. CÔNG TÁC CHUẨN BỊ SINH HOẠT CHI BỘ (10 ĐIỂM)
+                    </div>
+
+                    <label class="row">
+                        <div class="row-left">
+                            <input type="checkbox" checked>
+                            <span>Chuẩn bị nội dung sinh hoạt</span>
+                        </div>
+
+                        <span class="green">4 điểm</span>
+                    </label>
+
+                    <label class="row">
+                        <div class="row-left">
+                            <input type="checkbox" checked>
+                            <span>Họp chi ủy</span>
+                        </div>
+
+                        <span class="green">3 điểm</span>
+                    </label>
+
+                    <label class="row">
+                        <div class="row-left">
+                            <input type="checkbox" checked>
+                            <span>Thông báo địa điểm</span>
+                        </div>
+
+                        <span class="green">1 điểm</span>
+                    </label>
+
+                    <label class="row">
+                        <div class="row-left">
+                            <input type="checkbox" checked>
+                            <span>Đăng tải tài liệu</span>
+                        </div>
+
+                        <span class="green">2 điểm</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+            <div class="right">
+
+                <div class="summary">
+
+                    <div class="summary-title">
+                        TỔNG HỢP KẾT QUẢ
+                    </div>
+
+                    <div class="summary-label">
+                        Tổng điểm
+                    </div>
+
+                    <div class="score">
+                        95
+                        <span>/100</span>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="summary-label">
+                        Xếp loại (tạm tính)
+                    </div>
+
+                    <div class="rank">
+                        TỐT
+                    </div>
+
+                </div>
+
+                <div class="proposal">
+
+                    <div class="box-title">
+                        ĐỀ XUẤT
+                    </div>
+
+                    <textarea placeholder="Nhập nội dung đề xuất..."></textarea>
+
+                </div>
+
+                <div class="warning">
+
+                    <div class="box-title">
+                        LƯU Ý
+                    </div>
+
+                    <ul>
+                        <li>Kiểm tra kỹ thông tin trước khi gửi.</li>
+                        <li>Sau khi gửi sẽ không thể chỉnh sửa.</li>
+                        <li>Đảm bảo điểm số được nhập chính xác.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button class="draft-btn">
+                LƯU NHÁP
+            </button>
+
+            <button class="submit-btn">
+                GỬI THẨM ĐỊNH
+            </button>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
