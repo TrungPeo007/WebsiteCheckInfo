@@ -1,0 +1,112 @@
+USE ql_thongtinchibo;
+
+CREATE TABLE chibo (
+    stt INT AUTO_INCREMENT,                     -- Số thứ tự (Tự động tăng)
+    ten_chibo VARCHAR(100) NOT NULL,            -- Tên Chi Bộ (Dùng làm Khóa chính để liên kết)
+    tong_so_dang_vien INT DEFAULT 0,           -- Tổng số Đảng Viên
+    chinh_thuc INT DEFAULT 0,                  -- Số đảng viên Chính thức
+    du_bi INT DEFAULT 0,                       -- Số đảng viên Dự Bị
+    PRIMARY KEY (ten_chibo),                   -- Chọn tên chi bộ làm khóa chính
+    UNIQUE (stt)                               -- Đảm bảo STT không bị trùng lặp
+);
+
+CREATE TABLE tai_khoan (
+    user VARCHAR(50) NOT NULL PRIMARY KEY,
+    pass VARCHAR(255) NOT NULL,
+    hoten VARCHAR(100),
+    chibo VARCHAR(100),
+    chucvu VARCHAR(100),
+    role VARCHAR(50),
+    -- Tạo liên kết: cột chibo của bảng này phải tồn tại trong cột ten_chibo của bảng chibo
+    FOREIGN KEY (chibo) REFERENCES chibo(ten_chibo) ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+-- Thêm dữ liệu vào bảng chibo
+INSERT INTO chibo (ten_chibo) VALUES
+('Chi bộ Văn Cao'),
+('Chi bộ Văn Hòa'),
+('Chi bộ Kim Đới 1'),
+('Chi bộ Kim Đới 2'),
+('Chi bộ Kim Đới 3'),
+('Chi bộ Tam Kiệt'),
+('Chi bộ Xuân Úc'),
+('Chi bộ Úc Gián'),
+('Chi bộ Hòa Liễu'),
+('Chi bộ Xuân La'),
+('Chi bộ Cẩm Hoàn'),
+('Chi bộ Cẩm La'),
+('Chi bộ Thọ Xuân'),
+('Chi bộ Cầu Đen'),
+('Chi bộ Hồ Sen'),
+('Chi bộ Cẩm Xuân'),
+('Chi bộ Trà Phương'),
+('Chi bộ Phương Đôi'),
+('Chi bộ Quế Lâm'),
+('Chi bộ Trường MN Thụy Hương'),
+('Chi bộ Trường Mầm non Thanh Sơn'),
+('Chi bộ Trường MN Liên cơ'),
+('Chi bộ Trường MN Hữu Bằng'),
+('Chi bộ Trường MN Thuận Thiên'),
+('Chi bộ Trường Tiểu học thị trấn Núi Đối'),
+('Chi bộ Trường TH Hữu Bằng'),
+('Chi bộ Trường TH Thuận Thiên'),
+('Chi bộ Trường THCS thị trấn Núi Đối'),
+('Chi bộ Trường THCS Hữu Bằng'),
+('Chi bộ Trường THCS Thuận Thiên'),
+('Chi bộ Trường TH&THCS Thụy Hương'),
+('Chi bộ Trường TH&THCS Thanh Sơn'),
+('Chi bộ Quân sự'),
+('Chi bộ Công ty TNHH Xây dựng môi trường đô thị Kiến Thụy'),
+('Chi bộ Quỹ tín dụng nhân dân Thuận Thiên'),
+('Chi bộ Công ty Cổ phần Núi Đối Plaza'),
+('Chi bộ Trạm y tế xã Kiến Thụy'),
+('Chi bộ Trường THPT Nguyễn Huệ'),
+('Chi bộ Ban quản lý dự án đầu tư xây dựng Kiến Thụy'),
+('Chi bộ Trung tâm GDNN-DGTX Kiến Thụy'),
+('Ban đảng');
+
+-- Thêm dữ liệu vào bảng tai_khoan
+
+INSERT INTO tai_khoan (user, pass, hoten, chucvu, chibo, role) VALUES
+('Vancao', '123456', 'Nguyễn Văn Tiến', 'Bí thư chi bộ', 'Chi bộ Văn Cao', 'bithu'),
+('Vanhoa', '123456', 'Nguyễn Văn Thuệ', 'Bí thư chi bộ', 'Chi bộ Văn Hòa', 'bithu'),
+('Kimdoi1', '123456', 'Nguyễn Văn Khiển', 'Bí thư chi bộ', 'Chi bộ Kim Đới 1', 'bithu'),
+('Kimdoi2', '123456', 'Đặng Thị Xoa', 'Bí thư chi bộ', 'Chi bộ Kim Đới 2', 'bithu'),
+('Kimdoi3', '123456', 'Nguyễn Thị Làn', 'Bí thư chi bộ', 'Chi bộ Kim Đới 3', 'bithu'),
+('Tamkiet', '123456', 'Nguyễn Đức Ngự', 'Bí thư chi bộ', 'Chi bộ Tam Kiệt', 'bithu'),
+('Xuanuc', '123456', 'Nguyễn Xuân Đãn', 'Bí thư chi bộ', 'Chi bộ Xuân Úc', 'bithu'),
+('Ucgian', '123456', 'Nguyễn Đức Chiên', 'Bí thư chi bộ', 'Chi bộ Úc Gián', 'bithu'),
+('Hoalieu', '123456', 'Lê Hồng Sơn', 'Bí thư chi bộ', 'Chi bộ Hòa Liễu', 'bithu'),
+('Xuanla', '123456', 'Vũ Văn Thất', 'Bí thư chi bộ', 'Chi bộ Xuân La', 'bithu'),
+('Camhoan', '123456', 'Đỗ Văn Linh', 'Bí thư chi bộ', 'Chi bộ Cẩm Hoàn', 'bithu'),
+('Camla', '123456', 'Phạm Văn Đủ', 'Bí thư chi bộ', 'Chi bộ Cẩm La', 'bithu'),
+('Thoxuan', '123456', 'Trịnh Văn Đẳng', 'Bí thư chi bộ', 'Chi bộ Thọ Xuân', 'bithu'),
+('Cauden', '123456', 'Vũ Văn Hồng', 'Bí thư chi bộ', 'Chi bộ Cầu Đen', 'bithu'),
+('Hosen', '123456', 'Bùi Anh Hòa', 'Bí thư chi bộ', 'Chi bộ Hồ Sen', 'bithu'),
+('Camxuan', '123456', 'Hoàng Đức Hiệp', 'Bí thư chi bộ', 'Chi bộ Cẩm Xuân', 'bithu'),
+('Traphuong', '123456', 'Nguyễn Đình Đồng', 'Bí thư chi bộ', 'Chi bộ Trà Phương', 'bithu'),
+('Phuongdoi', '123456', 'Phạm Văn Nghiêm', 'Bí thư chi bộ', 'Chi bộ Phương Đôi', 'bithu'),
+('Quelam', '123456', 'Nguyễn Thị Hoài', 'Bí thư chi bộ', 'Chi bộ Quế Lâm', 'bithu'),
+('MNthuyhuong', '123456', 'Nguyễn Thị Sâm', 'Bí thư chi bộ', 'Chi bộ Trường MN Thụy Hương', 'bithu'),
+('MNthanhsown', '123456', 'Vũ Thị Thu Huyền', 'Bí thư chi bộ', 'Chi bộ Trường Mầm non Thanh Sơn', 'bithu'),
+('MNlienco', '123456', 'Nguyễn Thị Hoa', 'Bí thư chi bộ', 'Chi bộ Trường MN Liên cơ', 'bithu'),
+('MNhuubang', '123456', 'Nguyễn Thị Hoa', 'Bí thư chi bộ', 'Chi bộ Trường MN Hữu Bằng', 'bithu'),
+('MNthuanthien', '123456', 'Đào Thị Hồng Nhung', 'Bí thư chi bộ', 'Chi bộ Trường MN Thuận Thiên', 'bithu'),
+('THttNuiDoi', '123456', 'Nguyễn Thị Lan', 'Bí thư chi bộ', 'Chi bộ Trường Tiểu học thị trấn Núi Đối', 'bithu'),
+('THhuubang', '123456', 'Nguyễn Sỹ Huyền', 'Bí thư chi bộ', 'Chi bộ Trường TH Hữu Bằng', 'bithu'),
+('THthuanthien', '123456', 'Vũ Thị Hải Yến', 'Bí thư chi bộ', 'Chi bộ Trường TH Thuận Thiên', 'bithu'),
+('THCSNuidoi', '123456', 'Đoàn Đắc Thiếp', 'Bí thư chi bộ', 'Chi bộ Trường THCS thị trấn Núi Đối', 'bithu'),
+('THCSHuubang', '123456', 'Nguyễn Thị Hải Quảng', 'Bí thư chi bộ', 'Chi bộ Trường THCS Hữu Bằng', 'bithu'),
+('THCSthuanthien', '123456', 'Vũ Phan Thanh', 'Bí thư chi bộ', 'Chi bộ Trường THCS Thuận Thiên', 'bithu'),
+('TH&THCSThuyhuong', '123456', 'Nguyễn Văn Mai', 'Bí thư chi bộ', 'Chi bộ Trường TH&THCS Thụy Hương', 'bithu'),
+('TH&THCSThanhson', '123456', 'Nguyễn Trung Kiên', 'Bí thư chi bộ', 'Chi bộ Trường TH&THCS Thanh Sơn', 'bithu'),
+('Quansu', '123456', 'Nguyễn Minh Phương', 'Bí thư chi bộ', 'Chi bộ Quân sự', 'bithu'),
+('CBMoitruong', '123456', 'Hoàng Thị Ngọc', 'Bí thư chi bộ', 'Chi bộ Công ty TNHH Xây dựng môi trường đô thị Kiến Thụy', 'bithu'),
+('CBQuytindung', '123456', 'Đào Thị Cúc', 'Bí thư chi bộ', 'Chi bộ Quỹ tín dụng nhân dân Thuận Thiên', 'bithu'),
+('CBNuidoiplaza', '123456', 'Trần Văn Trung', 'Bí thư chi bộ', 'Chi bộ Công ty Cổ phần Núi Đối Plaza', 'bithu'),
+('CBtramyte', '123456', 'Phạm Hồng Thắng', 'Bí thư chi bộ', 'Chi bộ Trạm y tế xã Kiến Thụy', 'bithu'),
+('THPTNguyenhue', '123456', 'Nguyễn MInh Trung', 'Bí thư chi bộ', 'Chi bộ Trường THPT Nguyễn Huệ', 'bithu'),
+('CBBanqlda', '123456', 'Đỗ Văn Định', 'Bí thư chi bộ', 'Chi bộ Ban quản lý dự án đầu tư xây dựng Kiến Thụy', 'bithu'),
+('CBDGTX', '123456', 'Phạm Hữu Kiên', 'Bí thư chi bộ', 'Chi bộ Trung tâm GDNN-DGTX Kiến Thụy', 'bithu'),
+('duyet', '123456', 'Đặng Bá Huy', 'Duyệt', 'Ban đảng', 'duyet'),
+('BXD', '123456', 'Ngô Thị Thư', 'Quản trị viên', 'Ban đảng', 'admin');
