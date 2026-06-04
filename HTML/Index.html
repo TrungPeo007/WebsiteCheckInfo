@@ -72,24 +72,92 @@
             TRANG CHỦ
         </div>
 
-        <div class="menu-item">
-            <i class="fa-regular fa-user"></i>
-            SINH HOẠT ĐẢNG
+        <div class="menu-item-dropdown">
+            <div class="menu-item" id="btn-dropdown-dang">
+                <i class="fa-regular fa-user"></i>
+                ĐIỀU HÀNH VÀ SINH HOẠT ĐẢNG
+                <!-- Thay đổi thành icon chevron-up (chỉa lên) và thêm class icon-arrow để xử lý xoay -->
+                <i class="fa-solid fa-chevron-up icon-arrow"></i>
+            </div>
+
+            <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa-solid fa-book"></i> Sổ tay đảng viên</a></li>
+                <li><a href="#"><i class="fa-solid fa-star"></i> Chấm điểm</a></li>
+            </ul>
         </div>
 
-        <div class="menu-item">
-            <i class="fa-solid fa-building-columns"></i>
-            DỊCH VỤ CÔNG
-        </div>
+        <div class="menu-item-dropdown">
+            <div class="menu-item" id="btn-dropdown-dvc">
+                <i class="fa-solid fa-building-columns"></i>
+                DỊCH VỤ CÔNG VÀ THỦ TỤC HÀNH CHÍNH
+                <i class="fa-solid fa-chevron-up icon-arrow"></i>
+            </div>
 
-        <div class="menu-item">
-            <i class="fa-regular fa-clipboard"></i>
-            BÁO CÁO
+            <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa-solid fa-wallet"></i> Thu, nộp đảng phí</a></li>
+                <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Chuyển sinh hoạt Đảng chính thức</a></li>
+                <li><a href="#"><i class="fa-solid fa-arrow-right-arrow-left"></i> Chuyển sinh hoạt Đảng tạm thời</a>
+                </li>
+
+                <!-- THAY ĐỔI Ở ĐÂY: Thêm class 'has-submenu' cho mục cư trú 213 -->
+                <li class="has-submenu">
+                    <a href="#">
+                        <i class="fa-solid fa-id-card"></i> Thông tin cư trú 213
+                        <!-- Mũi tên nhỏ chỉ sang phải báo hiệu có menu ngang -->
+                        <i class="fa-solid fa-chevron-right submenu-arrow"></i>
+                    </a>
+
+                    <!-- Menu cấp 2 đổ ngang -->
+                    <ul class="submenu-side">
+                        <li><a href="#"><i class="fa-solid fa-chart-bar"></i>Tỷ lệ hoàn thành Báo cáo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-item-dropdown">
+            <div class="menu-item" id="btn-dropdown-cdbc">
+                <i class="fa-regular fa-clipboard"></i>
+                CHUYÊN ĐỀ BÁO CÁO
+                <!-- Mũi tên chính tự động xoay 180 độ khi hover -->
+                <i class="fa-solid fa-chevron-up icon-arrow"></i>
+            </div>
+
+            <!-- Dropdown cấp 1: Tự động rộng bằng chữ Chuyên đề báo cáo -->
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-file-lines"></i> Báo cáo theo QĐ
+                    </a>
+                </li>
+                <!-- MỤC MỚI THÊM VÀO ĐÂY ANH NHÉ -->
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-sitemap"></i> Báo cáo Tổ chức Đảng (TCĐ)
+            </a>
+        </li>
+                <!-- Mục Truy cập có menu con cấp 2 đổ ngang -->
+                <li class="has-submenu">
+                    <a href="#">
+                        <i class="fa-solid fa-right-to-bracket"></i> Truy cập
+                        <!-- Mũi tên nhỏ chỉ sang phải báo hiệu đổ ngang -->
+                        <i class="fa-solid fa-chevron-right submenu-arrow"></i>
+                    </a>
+
+                    <!-- Dropdown cấp 2: Tự động khít, không hở chuột và mở mượt mà -->
+                    <ul class="submenu-side">
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-money-check-dollar"></i> Tỷ lệ nộp Đảng phí
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <div class="menu-item">
             <i class="fa-regular fa-newspaper"></i>
-            CỔNG THÔNG TIN
+            NGHỊ QUYẾT CỦA ĐẢNG
         </div>
 
     </nav>

@@ -1,57 +1,55 @@
-window.onload = function(){
+window.onload = async function () {
 
-    let data =
-    localStorage.getItem("userData");
+    const res = await fetch("/me");
+    const data = await res.json();
 
-    /* KIỂM TRA ĐĂNG NHẬP */
-
-    if(!data){
-
+    if (!data.logged) {
         window.location.href = "/";
-
         return;
-
     }
 
-    let user =
-    JSON.parse(data);
+    let user = data.user;
 
-    /* HIỂN THỊ USER */
+    document.getElementById("tenUser").innerText = user.hoten;
+  document.getElementById("chucVu").innerText =
+    user.chucvu + " - " + user.chibo;
+};
 
-    document.getElementById("tenUser")
-    .innerText = user.hoten;
-
-    document.getElementById("chucVu")
-    .innerText = user.chibo;
-
-}
+/* MENU */
 function toggleMenu() {
-
     let menu = document.getElementById("logoutMenu");
-
-    if(menu.style.display === "block"){
-        menu.style.display = "none";
-    }
-    else{
-        menu.style.display = "block";
-    }
-
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 
-function dangXuat(event){
-
+/* LOGOUT */
+function dangXuat(event) {
     event.stopPropagation();
-
-    window.location.href = "HTML/Login.html";
-
+    window.location.href = "/logout";
 }
-document.addEventListener("click", function(event){
 
+/* click ngoài tắt menu */
+document.addEventListener("click", function (event) {
     let userBox = document.querySelector(".user-box");
     let menu = document.getElementById("logoutMenu");
 
-    if(!userBox.contains(event.target)){
+    if (!userBox.contains(event.target)) {
         menu.style.display = "none";
     }
-
 });
+// document.addEventListener("DOMContentLoaded", function() {
+//         const btnDropdown = document.getElementById("btn-dropdown-dang");
+//         const dropdownMenu = btnDropdown.nextElementSibling;
+
+//         // Khi click vào nút, bật/tắt class .show để ẩn/hiện menu con
+//         btnDropdown.addEventListener("click", function(e) {
+//             e.stopPropagation(); // Ngăn sự kiện nổi bọt lên window
+//             dropdownMenu.classList.toggle("show");
+//         });
+
+//         // Tự động đóng menu nếu người dùng click ra bất kỳ vị trí nào khác ngoài menu
+//         window.addEventListener("click", function() {
+//             if (dropdownMenu.classList.contains("show")) {
+//                 dropdownMenu.classList.remove("show");
+//             }
+//         });
+//     });
