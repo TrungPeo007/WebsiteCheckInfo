@@ -29,24 +29,34 @@
 
         </div>
 
-        <div class="header-right">
+       <div class="header-right">
 
-            <i class="fa-solid fa-circle-user avatar"></i>
+    <div class="user-box" onclick="toggleMenu()">
 
-            <div class="user-info">
+        <i class="fa-solid fa-circle-user avatar"></i>
 
-                <div class="user-name" id="tenUser">
-                </div>
+        <div class="user-info">
 
-                <div class="user-unit" id="chucVu">
-                </div>
+            <div class="user-name" id="tenUser"></div>
 
-            </div>
-            
-
-            <i class="fa-solid fa-chevron-down"></i>
+            <div class="user-unit" id="chucVu"></div>
 
         </div>
+
+        <i class="fa-solid fa-chevron-up" id="arrowIcon"></i>
+
+        <div class="logout-menu" id="logoutMenu">
+
+            <button onclick="dangXuat(event)">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Đăng xuất
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
     </header>
 
     <main>
@@ -286,10 +296,12 @@
         <div class="buttons">
 
             <button class="draft-btn">
+                <i class="fa-solid fa-floppy-disk"></i>
                 LƯU NHÁP
             </button>
 
             <button class="submit-btn">
+                <i class="fa-solid fa-paper-plane"></i>
                 GỬI THẨM ĐỊNH
             </button>
 
@@ -298,6 +310,5 @@
     </main>
 
 </body>
-<script src="/JS/login.js"></script>
-<script src="/JS/index.js"></script>
+<script src="/JS/logout.js"></script>
 </html>

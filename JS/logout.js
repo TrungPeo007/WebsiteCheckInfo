@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         const data = await res.json();
 
         if (!data.logged) {
-            window.location.href = "/";
+            window.location.href = "/index";
             return;
         }
 
@@ -40,7 +40,7 @@ function dangXuat(event) {
 
     event.stopPropagation();
 
-    window.location.href = "/logout";
+    window.location.href = "/index";
 }
 
 document.addEventListener("click", function (e) {

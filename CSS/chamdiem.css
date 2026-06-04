@@ -412,3 +412,62 @@ main{
         font-size:55px;
     }
 }
+.user-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.user-info{
+    display:flex;
+    flex-direction:column;
+}
+
+#arrowIcon{
+    transition:0.3s;
+}
+
+#arrowIcon.active{
+    transform:rotate(180deg);
+}
+
+.logout-menu{
+    position:absolute;
+    top:55px;
+    right:0;
+
+    background:white;
+    min-width:160px;
+
+    border-radius:10px;
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+    display:none;
+    z-index:999;
+}
+
+.logout-menu button{
+    width:100%;
+    border:none;
+    background:white;
+
+    padding:12px 15px;
+
+    text-align:left;
+
+    cursor:pointer;
+    font-size:14px;
+}
+
+.logout-menu button:hover{
+    background:#f3f3f3;
+}
+
+.logout-menu button i{
+    margin-right:8px;
+    color:#b40000;
+}
