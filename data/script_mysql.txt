@@ -111,7 +111,8 @@ INSERT INTO tai_khoan (user, pass, hoten, chucvu, chibo, role) VALUES
 ('duyet', '123456', 'Đặng Bá Huy', 'Duyệt', 'Ban đảng', 'duyet'),
 ('BXD', '123456', 'Ngô Thị Thư', 'Quản trị viên', 'Ban đảng', 'admin');
 
--- Cập nhật tổng số đảng viên cho mỗi chi bộ (giả sử mỗi chi bộ có 10 đảng viên chính thức và 5 đảng viên dự bị)
+
+
 UPDATE chibo SET tong_so_dang_vien = 12,    chinh_thuc = 12,    du_bi = 0 WHERE ten_chibo = 'Chi bộ Quân sự';
 UPDATE chibo SET tong_so_dang_vien = 36, chinh_thuc = 34, du_bi = 2 WHERE ten_chibo = 'Chi bộ Trường MN Thuận Thiên';
 UPDATE chibo SET tong_so_dang_vien = 36, chinh_thuc = 33, du_bi = 3 WHERE ten_chibo = 'Chi bộ Trường TH Thuận Thiên';
@@ -152,3 +153,4 @@ UPDATE chibo SET tong_so_dang_vien = 97, chinh_thuc = 0, du_bi = 97 WHERE ten_ch
 UPDATE chibo SET tong_so_dang_vien = 105, chinh_thuc = 3, du_bi = 108 WHERE ten_chibo = 'Chi bộ Cầu Đen';
 UPDATE chibo SET tong_so_dang_vien = 83, chinh_thuc = 0, du_bi = 83 WHERE ten_chibo = 'Chi bộ Thọ Xuân';
 UPDATE chibo SET tong_so_dang_vien = 5, chinh_thuc = 0, du_bi = 5 WHERE ten_chibo = 'Chi bộ Công ty Cổ phần Núi Đối Plaza';
+
