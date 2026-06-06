@@ -133,6 +133,7 @@ body{
     align-items:center;
     gap:10px;
     font-weight:bold;
+    font-size: 15px;
     color:#444;
     cursor:pointer;
     border-bottom:3px solid transparent;
