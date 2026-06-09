@@ -10,6 +10,14 @@ CREATE TABLE chibo (
     UNIQUE (stt)                               -- Đảm bảo STT không bị trùng lặp
 );
 
+ALTER TABLE chibo
+ADD COLUMN cap_to_chuc VARCHAR(100) 
+    CHARACTER SET utf8mb4 
+    COLLATE utf8mb4_unicode_ci 
+    DEFAULT NULL;
+
+
+
 CREATE TABLE tai_khoan (
     user VARCHAR(50) NOT NULL PRIMARY KEY,
     pass VARCHAR(255) NOT NULL,
@@ -113,44 +121,44 @@ INSERT INTO tai_khoan (user, pass, hoten, chucvu, chibo, role) VALUES
 
 
 
-UPDATE chibo SET tong_so_dang_vien = 12,    chinh_thuc = 12,    du_bi = 0 WHERE ten_chibo = 'Chi bộ Quân sự';
-UPDATE chibo SET tong_so_dang_vien = 36, chinh_thuc = 34, du_bi = 2 WHERE ten_chibo = 'Chi bộ Trường MN Thuận Thiên';
-UPDATE chibo SET tong_so_dang_vien = 36, chinh_thuc = 33, du_bi = 3 WHERE ten_chibo = 'Chi bộ Trường TH Thuận Thiên';
-UPDATE chibo SET tong_so_dang_vien = 26, chinh_thuc = 26, du_bi = 0 WHERE ten_chibo = 'Chi bộ Trường THCS Thuận Thiên';
-UPDATE chibo SET tong_so_dang_vien = 34, chinh_thuc = 32, du_bi = 2 WHERE ten_chibo = 'Chi bộ Trường MN Hữu Bằng';
-UPDATE chibo SET tong_so_dang_vien = 38, chinh_thuc = 35, du_bi = 3 WHERE ten_chibo = 'Chi bộ Trường TH Hữu Bằng';
-UPDATE chibo SET tong_so_dang_vien = 20, chinh_thuc = 20, du_bi = 0 WHERE ten_chibo = 'Chi bộ Trường THCS Hữu Bằng';
-UPDATE chibo SET tong_so_dang_vien = 30, chinh_thuc = 27, du_bi = 3 WHERE ten_chibo = 'Chi bộ Trường THCS thị trấn Núi Đối';
-UPDATE chibo SET tong_so_dang_vien = 30, chinh_thuc = 29, du_bi = 1 WHERE ten_chibo = 'Chi bộ Trường Tiểu học thị trấn Núi Đối';
-UPDATE chibo SET tong_so_dang_vien = 22, chinh_thuc = 21, du_bi = 1 WHERE ten_chibo = 'Chi bộ Trường MN Núi Đối';
-UPDATE chibo SET tong_so_dang_vien = 29, chinh_thuc = 29, du_bi = 0 WHERE ten_chibo = 'Chi bộ Trường Mầm non Thanh Sơn';
-UPDATE chibo SET tong_so_dang_vien = 42, chinh_thuc = 42, du_bi = 0 WHERE ten_chibo = 'Chi bộ Trường TH&THCS Thanh Sơn';
-UPDATE chibo SET tong_so_dang_vien = 25, chinh_thuc = 25, du_bi = 0 WHERE ten_chibo = 'Chi bộ Trường MN Thụy Hương';
-UPDATE chibo SET tong_so_dang_vien = 37, chinh_thuc = 35, du_bi = 2 WHERE ten_chibo = 'Chi bộ Trường TH&THCS Thụy Hương';
-UPDATE chibo SET tong_so_dang_vien = 17, chinh_thuc = 16, du_bi = 1 WHERE ten_chibo = 'Chi bộ Trường THPT Nguyễn Huệ';
-UPDATE chibo SET tong_so_dang_vien = 18, chinh_thuc = 18, du_bi = 0 WHERE ten_chibo = 'Chi bộ Trung tâm GDNN-DGTX Kiến Thụy';
-UPDATE chibo SET tong_so_dang_vien = 16, chinh_thuc = 16, du_bi = 0 WHERE ten_chibo = 'Chi bộ Ban quản lý dự án đầu tư xây dựng Kiến Thụy';
-UPDATE chibo SET tong_so_dang_vien = 23, chinh_thuc = 23, du_bi = 0 WHERE ten_chibo = 'Chi bộ Trạm y tế xã Kiến Thụy';
-UPDATE chibo SET tong_so_dang_vien = 48, chinh_thuc = 1, du_bi = 49 WHERE ten_chibo = 'Chi bộ Hòa Liễu';
-UPDATE chibo SET tong_so_dang_vien = 94, chinh_thuc = 2, du_bi = 96 WHERE ten_chibo = 'Chi bộ Xuân Úc';
-UPDATE chibo SET tong_so_dang_vien = 59, chinh_thuc = 4, du_bi = 63 WHERE ten_chibo = 'Chi bộ Úc Gián';
-UPDATE chibo SET tong_so_dang_vien = 4, chinh_thuc = 1, du_bi = 5 WHERE ten_chibo = 'Chi bộ Quỹ tín dụng nhân dân Thuận Thiên';
-UPDATE chibo SET tong_so_dang_vien = 3, chinh_thuc = 1, du_bi = 4 WHERE ten_chibo = 'Chi bộ Công ty TNHH Xây dựng môi trường đô thị Kiến Thụy';
-UPDATE chibo SET tong_so_dang_vien = 29, chinh_thuc = 0, du_bi = 29 WHERE ten_chibo = 'Chi bộ Kim Đới 1';
-UPDATE chibo SET tong_so_dang_vien = 36, chinh_thuc = 1, du_bi = 37 WHERE ten_chibo = 'Chi bộ Kim Đới 2';
-UPDATE chibo SET tong_so_dang_vien = 17, chinh_thuc = 1, du_bi = 18 WHERE ten_chibo = 'Chi bộ Kim Đới 3';
-UPDATE chibo SET tong_so_dang_vien = 79, chinh_thuc = 1, du_bi = 80 WHERE ten_chibo = 'Chi bộ Văn Hòa';
-UPDATE chibo SET tong_so_dang_vien = 15, chinh_thuc = 1, du_bi = 16 WHERE ten_chibo = 'Chi bộ Văn Cao';
-UPDATE chibo SET tong_so_dang_vien = 47, chinh_thuc = 2, du_bi = 49 WHERE ten_chibo = 'Chi bộ Tam Kiệt';
-UPDATE chibo SET tong_so_dang_vien = 70, chinh_thuc = 1, du_bi = 71 WHERE ten_chibo = 'Chi bộ Cẩm Hoàn';
-UPDATE chibo SET tong_so_dang_vien = 61, chinh_thuc = 1, du_bi = 62 WHERE ten_chibo = 'Chi bộ Cẩm La';
-UPDATE chibo SET tong_so_dang_vien = 63, chinh_thuc = 0, du_bi = 63 WHERE ten_chibo = 'Chi bộ Xuân La';
-UPDATE chibo SET tong_so_dang_vien = 44, chinh_thuc = 0, du_bi = 44 WHERE ten_chibo = 'Chi bộ Phương Đôi';
-UPDATE chibo SET tong_so_dang_vien = 92, chinh_thuc = 1, du_bi = 93 WHERE ten_chibo = 'Chi bộ Trà Phương';
-UPDATE chibo SET tong_so_dang_vien = 39, chinh_thuc = 0, du_bi = 39 WHERE ten_chibo = 'Chi bộ Quế Lâm';
-UPDATE chibo SET tong_so_dang_vien = 85, chinh_thuc = 0, du_bi = 85 WHERE ten_chibo = 'Chi bộ Cẩm Xuân';
-UPDATE chibo SET tong_so_dang_vien = 97, chinh_thuc = 0, du_bi = 97 WHERE ten_chibo = 'Chi bộ Hồ Sen';
-UPDATE chibo SET tong_so_dang_vien = 105, chinh_thuc = 3, du_bi = 108 WHERE ten_chibo = 'Chi bộ Cầu Đen';
-UPDATE chibo SET tong_so_dang_vien = 83, chinh_thuc = 0, du_bi = 83 WHERE ten_chibo = 'Chi bộ Thọ Xuân';
-UPDATE chibo SET tong_so_dang_vien = 5, chinh_thuc = 0, du_bi = 5 WHERE ten_chibo = 'Chi bộ Công ty Cổ phần Núi Đối Plaza';
+UPDATE chibo SET tong_so_dang_vien=12, chinh_thuc=12, du_bi=0, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Quân sự';
+UPDATE chibo SET tong_so_dang_vien=36, chinh_thuc=36, du_bi=0, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường MN Thuận Thiên';
+UPDATE chibo SET tong_so_dang_vien=36, chinh_thuc=33, du_bi=3, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường TH Thuận Thiên';
+UPDATE chibo SET tong_so_dang_vien=26, chinh_thuc=26, du_bi=0, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường THCS Thuận Thiên';
+UPDATE chibo SET tong_so_dang_vien=33, chinh_thuc=33, du_bi=0, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường MN Hữu Bằng';
+UPDATE chibo SET tong_so_dang_vien=38, chinh_thuc=35, du_bi=3, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường TH Hữu Bằng';
+UPDATE chibo SET tong_so_dang_vien=20, chinh_thuc=20, du_bi=0, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường THCS Hữu Bằng';
+UPDATE chibo SET tong_so_dang_vien=30, chinh_thuc=27, du_bi=3, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường THCS thị trấn Núi Đối';
+UPDATE chibo SET tong_so_dang_vien=30, chinh_thuc=29, du_bi=1, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường Tiểu học thị trấn Núi Đối';
+UPDATE chibo SET tong_so_dang_vien=22, chinh_thuc=21, du_bi=1, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường MN Núi Đối';
+UPDATE chibo SET tong_so_dang_vien=29, chinh_thuc=29, du_bi=0, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường Mầm non Thanh Sơn';
+UPDATE chibo SET tong_so_dang_vien=42, chinh_thuc=42, du_bi=0, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường TH&THCS Thanh Sơn';
+UPDATE chibo SET tong_so_dang_vien=25, chinh_thuc=25, du_bi=0, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường MN Thụy Hương';
+UPDATE chibo SET tong_so_dang_vien=37, chinh_thuc=35, du_bi=2, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường TH&THCS Thụy Hương';
+UPDATE chibo SET tong_so_dang_vien=17, chinh_thuc=16, du_bi=1, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trường THPT Nguyễn Huệ';
+UPDATE chibo SET tong_so_dang_vien=18, chinh_thuc=18, du_bi=0, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trung tâm GDNN-DGTX Kiến Thụy';
+UPDATE chibo SET tong_so_dang_vien=16, chinh_thuc=16, du_bi=0, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Ban quản lý dự án đầu tư xây dựng Kiến Thụy';
+UPDATE chibo SET tong_so_dang_vien=23, chinh_thuc=23, du_bi=0, cap_to_chuc='Chi bộ Cơ Sở' WHERE ten_chibo='Chi bộ Trạm y tế xã Kiến Thụy';
 
+UPDATE chibo SET tong_so_dang_vien=49, chinh_thuc=48, du_bi=1, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Hòa Liễu';
+UPDATE chibo SET tong_so_dang_vien=96, chinh_thuc=94, du_bi=2, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Xuân Úc';
+UPDATE chibo SET tong_so_dang_vien=63, chinh_thuc=60, du_bi=3, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Úc Gián';
+UPDATE chibo SET tong_so_dang_vien=5, chinh_thuc=4, du_bi=1, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Quỹ tín dụng nhân dân Thuận Thiên';
+UPDATE chibo SET tong_so_dang_vien=4, chinh_thuc=3, du_bi=1, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Công ty TNHH Xây dựng môi trường đô thị Kiến Thụy';
+UPDATE chibo SET tong_so_dang_vien=29, chinh_thuc=29, du_bi=0, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Kim Đới 1';
+UPDATE chibo SET tong_so_dang_vien=37, chinh_thuc=36, du_bi=1, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Kim Đới 2';
+UPDATE chibo SET tong_so_dang_vien=18, chinh_thuc=17, du_bi=1, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Kim Đới 3';
+UPDATE chibo SET tong_so_dang_vien=80, chinh_thuc=80, du_bi=0, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Văn Hòa';
+UPDATE chibo SET tong_so_dang_vien=16, chinh_thuc=15, du_bi=1, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Văn Cao';
+UPDATE chibo SET tong_so_dang_vien=49, chinh_thuc=47, du_bi=2, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Tam Kiệt';
+UPDATE chibo SET tong_so_dang_vien=71, chinh_thuc=70, du_bi=1, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Cẩm Hoàn';
+UPDATE chibo SET tong_so_dang_vien=62, chinh_thuc=61, du_bi=1, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Cẩm La';
+UPDATE chibo SET tong_so_dang_vien=63, chinh_thuc=63, du_bi=0, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Xuân La';
+UPDATE chibo SET tong_so_dang_vien=44, chinh_thuc=44, du_bi=0, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Phương Đôi';
+UPDATE chibo SET tong_so_dang_vien=93, chinh_thuc=92, du_bi=1, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Trà Phương';
+UPDATE chibo SET tong_so_dang_vien=39, chinh_thuc=39, du_bi=0, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Quế Lâm';
+UPDATE chibo SET tong_so_dang_vien=85, chinh_thuc=85, du_bi=0, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Cẩm Xuân';
+UPDATE chibo SET tong_so_dang_vien=97, chinh_thuc=97, du_bi=0, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Hồ Sen';
+UPDATE chibo SET tong_so_dang_vien=108, chinh_thuc=105, du_bi=3, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Cầu Đen';
+UPDATE chibo SET tong_so_dang_vien=83, chinh_thuc=83, du_bi=0, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Thọ Xuân';
+UPDATE chibo SET tong_so_dang_vien=5, chinh_thuc=5, du_bi=0, cap_to_chuc='Chi bộ Trực Thuộc' WHERE ten_chibo='Chi bộ Công ty Cổ phần Núi Đối Plaza';
